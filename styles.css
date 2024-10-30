@@ -1,0 +1,50 @@
+/* Estilo personalizado com tema roxo */
+body{
+    background-color: #636363;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .bg-roxo {
+    background-color: #6f42c1;
+  }
+  
+  .hero {
+    padding: 100px 0;
+    background-color: #2d2d2d;
+  }
+  
+  .navbar-brand, h1, h2 {
+    font-weight: bold;
+  }
+  
+  .glow {
+    color: #e0b3ff;
+    text-shadow: 0 0 10px #9f79ee, 0 0 20px #bb86fc;
+    
+  }
+  
+  .glow-on-hover {
+    transition: 0.3s;
+  }
+  
+  .glow-on-hover:hover {
+    box-shadow: 0 0 15px #bb86fc, 0 0 30px #9f79ee;
+  }
+  
+  .btn-brilhante {
+    background-color: #9f79ee;
+    color: white;
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .btn-brilhante:hover {
+    background-color: #bb86fc;
+    box-shadow: 0 0 15px #e0b3ff, 0 0 30px #bb86fc;
+  }
+  p{
+    color: white;
+  }
+  a:link {
+    color: rgb(255, 255, 255);
+ }
