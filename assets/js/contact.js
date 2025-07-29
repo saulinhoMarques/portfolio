@@ -70,7 +70,7 @@ class ContactForm {
         // 4. Substituir os IDs abaixo
         
         if (typeof emailjs !== 'undefined') {
-            emailjs.init("YOUR_PUBLIC_KEY"); // Substitua pela sua chave pública
+            emailjs.init("E3FqdvN35Qn3i7XIY"); // Substitua pela sua chave pública
         }
     }
 
@@ -87,8 +87,8 @@ class ContactForm {
         // Se EmailJS estiver disponível, use-o
         if (typeof emailjs !== 'undefined') {
             return emailjs.send(
-                'YOUR_SERVICE_ID',    // Substitua pelo seu Service ID
-                'YOUR_TEMPLATE_ID',   // Substitua pelo seu Template ID
+                'service_ejuw27g',    // Substitua pelo seu Service ID
+                'template_6yuxdh4',   // Substitua pelo seu Template ID
                 templateParams
             );
         } else {
