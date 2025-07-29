@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="Portfólio de Mr.IT - Desenvolvedor Front-end e Estudante da ETEC Francisco Morato. Especializado em HTML, CSS, JavaScript e projetos inovadores.">
+  <meta name="keywords" content="desenvolvedor, front-end, HTML, CSS, JavaScript, portfólio, ETEC, Francisco Morato">
+  <meta name="author" content="Mr.IT">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Mr.IT - Desenvolvedor Front-end">
+  <meta property="og:description" content="Portfólio de desenvolvedor front-end especializado em tecnologias web modernas">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="assets/images/profile.jpg">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mr.IT - Desenvolvedor Front-end">
+  <meta name="twitter:description" content="Portfólio de desenvolvedor front-end especializado em tecnologias web modernas">
+  <meta name="twitter:image" content="assets/images/profile.jpg">
+  
+  <title>Mr.IT - Desenvolvedor Front-end | Portfólio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-roxo fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand glow" href="#home">
+        <i class="fas fa-code me-2"></i>
+        <strong>Mr.IT</strong>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#habilidades">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projetos">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <h1 class="hero-title glow mb-3">
+            Olá, eu sou <span class="text-gradient">Mr.IT</span>
+          </h1>
+          <h2 class="hero-subtitle mb-4">
+            Desenvolvedor Front-end & Estudante
+          </h2>
+          <p class="hero-description mb-4">
+            Apaixonado por tecnologia e programação, criando experiências digitais incríveis com HTML, CSS, JavaScript e muito mais. Estudante da ETEC Francisco Morato em busca de novos desafios.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projetos" class="btn btn-brilhante me-3">
+              <i class="fas fa-rocket me-2"></i>Ver Projetos
+            </a>
+            <a href="#contato" class="btn btn-outline-light">
+              <i class="fas fa-envelope me-2"></i>Contato
+            </a>
+          </div>
+          <div class="social-links mt-4">
+            <a href="https://wa.me/5511997274119" target="_blank" class="social-link" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" target="_blank" class="social-link" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" target="_blank" class="social-link" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center" data-aos="fade-left">
+          <div class="hero-image">
+            <img src="assets/images/profile.jpg" alt="Foto de Mr.IT - Desenvolvedor Front-end" class="img-fluid rounded-circle profile-img">
+            <div class="floating-elements">
+              <div class="floating-icon" style="--delay: 0s">
+                <i class="fab fa-html5"></i>
+              </div>
+              <div class="floating-icon" style="--delay: 1s">
+                <i class="fab fa-css3-alt"></i>
+              </div>
+              <div class="floating-icon" style="--delay: 2s">
+                <i class="fab fa-js-square"></i>
+              </div>
+              <div class="floating-icon" style="--delay: 3s">
+                <i class="fab fa-bootstrap"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <a href="#sobre" class="scroll-down" aria-label="Rolar para baixo">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Sobre Section -->
+  <section id="sobre" class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title glow">Sobre Mim</h2>
+          <p class="section-subtitle">Conheça um pouco da minha jornada</p>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="about-content">
+            <p class="lead">
+              Sou um estudante de desenvolvimento front-end, apaixonado por tecnologia e programação. Tenho experiência com HTML, CSS, JavaScript, PHP e sempre estou aprendendo coisas novas.
+            </p>
+            <p>
+              Atualmente, estou no 2º ano do Ensino Médio na ETEC de Francisco Morato e gosto de explorar projetos de robótica e banco de dados. Meu objetivo é me tornar um desenvolvedor full-stack e contribuir para projetos inovadores.
+            </p>
+            <div class="about-stats mt-4">
+              <div class="row text-center">
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h3 class="stat-number glow">4+</h3>
+                    <p class="stat-label">Projetos</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h3 class="stat-number glow">2</h3>
+                    <p class="stat-label">Anos Estudando</p>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="stat-item">
+                    <h3 class="stat-number glow">5+</h3>
+                    <p class="stat-label">Tecnologias</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>2024 - Presente</h4>
+                <h5>Desenvolvedor Front-end</h5>
+                <p>Criação de projetos pessoais e aprendizado contínuo em tecnologias web modernas.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>2023 - Presente</h4>
+                <h5>ETEC Francisco Morato</h5>
+                <p>Ensino Médio com foco em tecnologia, robótica e programação.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>2022</h4>
+                <h5>Início na Programação</h5>
+                <p>Primeiros passos no mundo da programação com HTML e CSS.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Habilidades Section -->
+  <section id="habilidades" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title glow">Habilidades & Tecnologias</h2>
+          <p class="section-subtitle">Ferramentas que domino e estou aprendendo</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-4" data-aos="fade-right">
+          <h3 class="mb-4 text-white">Linguagens & Frameworks</h3>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fab fa-html5 text-orange me-2"></i>HTML5
+              </span>
+              <span class="skill-percentage">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 90%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fab fa-css3-alt text-blue me-2"></i>CSS3
+              </span>
+              <span class="skill-percentage">85%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 85%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fab fa-js-square text-yellow me-2"></i>JavaScript
+              </span>
+              <span class="skill-percentage">75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fab fa-php text-purple me-2"></i>PHP
+              </span>
+              <span class="skill-percentage">60%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 60%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4" data-aos="fade-left">
+          <h3 class="mb-4 text-white">Ferramentas & Outros</h3>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fab fa-bootstrap text-purple me-2"></i>Bootstrap
+              </span>
+              <span class="skill-percentage">80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fas fa-database text-green me-2"></i>Banco de Dados
+              </span>
+              <span class="skill-percentage">65%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 65%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fas fa-robot text-cyan me-2"></i>Robótica
+              </span>
+              <span class="skill-percentage">70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">
+                <i class="fab fa-git-alt text-red me-2"></i>Git/GitHub
+              </span>
+              <span class="skill-percentage">55%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 55%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos Section -->
+  <section id="projetos" class="py-5 bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title glow">Meus Projetos</h2>
+          <p class="section-subtitle text-white">Alguns dos trabalhos que desenvolvi</p>
+        </div>
+      </div>
+      
+      <!-- Filtros de Projeto -->
+      <div class="row mb-4">
+        <div class="col-12 text-center" data-aos="fade-up">
+          <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="game">Jogos</button>
+            <button class="filter-btn" data-filter="app">Aplicações</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="projects-container">
+        <!-- Projeto 1 -->
+        <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="web" data-aos="fade-up">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/projects/cadastro-preview.jpg" alt="Projeto Cadastro" class="img-fluid">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://saulinhomarques.github.io/cadastro/" target="_blank" class="project-link" aria-label="Ver projeto">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" target="_blank" class="project-link" aria-label="Ver código">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h4 class="project-title">Sistema de Cadastro</h4>
+              <p class="project-description">
+                Tela de cadastro interativa que coleta informações do usuário. Desenvolvido para treinar layout e validação com JavaScript.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/projects/feira-preview.jpg" alt="Projeto Feira 2024" class="img-fluid">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="http://feira2024.shop/" target="_blank" class="project-link" aria-label="Ver projeto">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" target="_blank" class="project-link" aria-label="Ver código">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h4 class="project-title">Feira 2024</h4>
+              <p class="project-description">
+                Projeto colaborativo desenvolvido na ETEC para divulgar os cursos da região. Criado em equipe usando Mobirise.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Mobirise</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Colaborativo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="game" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/projects/mosca-preview.jpg" alt="Jogo da Mosca" class="img-fluid">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://saulinhomarques.github.io/mosca/" target="_blank" class="project-link" aria-label="Ver projeto">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" target="_blank" class="project-link" aria-label="Ver código">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h4 class="project-title">Jogo da Mosca</h4>
+              <p class="project-description">
+                Jogo interativo onde a "mosca" foge do cursor do mouse. Desenvolvido para praticar jQuery e interações com mouse.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">jQuery</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Game</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projeto 4 -->
+        <div class="col-lg-4 col-md-6 mb-4 project-item" data-category="game" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="assets/images/projects/bomba-preview.jpg" alt="Jogo da Bomba" class="img-fluid">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://saulinhomarques.github.io/bomba/" target="_blank" class="project-link" aria-label="Ver projeto">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" target="_blank" class="project-link" aria-label="Ver código">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h4 class="project-title">Desarme da Bomba</h4>
+              <p class="project-description">
+                Jogo de desarme de bomba com funcionalidade drag-and-drop. Focado em treinar interações avançadas com JavaScript.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Drag & Drop</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">Game</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato Section -->
+  <section id="contato" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title glow">Entre em Contato</h2>
+          <p class="section-subtitle">Vamos conversar sobre projetos e oportunidades</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-4" data-aos="fade-right">
+          <div class="contact-info">
+            <h3 class="mb-4 text-white">Informações de Contato</h3>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div class="contact-details">
+                <h5>WhatsApp</h5>
+                <p>+55 (11) 99727-4119</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h5>Email</h5>
+                <p>contato@mrit.dev</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h5>Localização</h5>
+                <p>Francisco Morato, SP - Brasil</p>
+              </div>
+            </div>
+            <div class="social-links-contact mt-4">
+              <a href="https://wa.me/5511997274119" target="_blank" class="social-link-contact" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#" target="_blank" class="social-link-contact" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" target="_blank" class="social-link-contact" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <form id="contact-form" class="contact-form">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu Nome" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Seu Email" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="assunto" name="assunto" placeholder="Assunto" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Sua Mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-brilhante w-100">
+              <i class="fas fa-paper-plane me-2"></i>Enviar Mensagem
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p class="mb-2">&copy; 2024 Mr.IT. Todos os direitos reservados.</p>
+          <p class="mb-0">Desenvolvido com <i class="fas fa-heart text-danger"></i> e muito <i class="fas fa-coffee text-warning"></i></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>
+
