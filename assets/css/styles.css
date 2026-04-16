@@ -37,6 +37,33 @@
   --spacing-xl: clamp(2rem, 6vw, 4rem);
 }
 
+/* ===== LIGHT MODE ===== */
+:root[data-theme="light"] {
+  /* Cores principais */
+  --primary-color: #6f42c1;
+  --primary-light: #9f79ee;
+  --primary-dark: #5a2d91;
+  --secondary-color: #7c3aed;
+  --accent-color: #c4b5fd;
+  
+  /* Cores de fundo */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --bg-card: #e5e7eb;
+  --bg-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  
+  /* Cores de texto */
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 0 20px rgba(111, 66, 193, 0.2);
+}
+
 /* ===== RESET E BASE ===== */
 * {
   margin: 0;
@@ -67,6 +94,7 @@ body {
   max-width: 100vw;
   position: relative;
   width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Força todos os elementos a respeitarem a viewport */
@@ -141,6 +169,46 @@ h1, h2, h3, h4, h5, h6 {
   /* Garante que não vaze */
   width: 100%;
   max-width: 100vw;
+}
+
+/* ===== THEME TOGGLE BUTTON ===== */
+.theme-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--bg-gradient);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(20deg);
+  box-shadow: 0 0 30px rgba(111, 66, 193, 0.5);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
 }
 
 .navbar.scrolled {
@@ -774,7 +842,7 @@ footer {
 /* ===== BACK TO TOP RESPONSIVO ===== */
 .back-to-top {
   position: fixed;
-  bottom: clamp(20px, 5vw, 30px);
+  bottom: clamp(100px, 15vw, 120px);
   right: clamp(20px, 5vw, 30px);
   width: clamp(40px, 8vw, 50px);
   height: clamp(40px, 8vw, 50px);
