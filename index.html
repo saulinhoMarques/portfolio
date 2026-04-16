@@ -36,6 +36,24 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/animations.css">
+  <style>
+    /* Ajustes rápidos de UX sugeridos */
+    .social-link:hover, .social-link-contact:hover {
+      transform: scale(1.1) translateY(-5px);
+      filter: brightness(1.2);
+    }
+    .btn-brilhante {
+      animation: pulse-purple 2s infinite;
+    }
+    @keyframes pulse-purple {
+      0% { box-shadow: 0 0 0 0 rgba(111, 66, 193, 0.4); }
+      70% { box-shadow: 0 0 0 15px rgba(111, 66, 193, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(111, 66, 193, 0); }
+    }
+    .navbar-brand strong {
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -98,11 +116,14 @@
             <a href="https://wa.me/5511997274119" target="_blank" class="social-link" aria-label="WhatsApp">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="#" target="_blank" class="social-link" aria-label="GitHub">
+            <a href="https://github.com/saulinhoMarques" target="_blank" class="social-link" aria-label="GitHub">
               <i class="fab fa-github"></i>
             </a>
-            <a href="#" target="_blank" class="social-link" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
+            <a href="https://www.instagram.com/saulinho.dev?igsh=c2YzanA0bW5ocmZ6" target="_blank" class="social-link" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:saulomqs975@gmail.com" class="social-link" aria-label="E-mail">
+              <i class="fas fa-envelope"></i>
             </a>
           </div>
         </div>
@@ -503,8 +524,9 @@
           </div>
           <div class="social-links-contact mt-4">
             <a href="https://wa.me/5511997274119" target="_blank" class="social-link-contact" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="#" target="_blank" class="social-link-contact" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank" class="social-link-contact" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/saulinhoMarques" target="_blank" class="social-link-contact" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/saulinho.dev?igsh=c2YzanA0bW5ocmZ6" target="_blank" class="social-link-contact" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:saulomqs975@gmail.com" class="social-link-contact" aria-label="E-mail"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
       </div>
@@ -539,7 +561,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <p class="mb-2">&copy; 2024 Mr.IT. Todos os direitos reservados.</p>
+          <p class="mb-2">&copy; 2026 Mr.IT. Todos os direitos reservados.</p>
           <p class="mb-0">Desenvolvido com <i class="fas fa-heart text-danger"></i> e muito <i class="fas fa-coffee text-warning"></i></p>
         </div>
       </div>
