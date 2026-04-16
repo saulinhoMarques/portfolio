@@ -286,6 +286,19 @@ h1, h2, h3, h4, h5, h6 {
   color: #111827;
 }
 
+:root[data-theme="light"] .glow {
+  color: #5d3a8a;
+  text-shadow: none;
+}
+
+:root[data-theme="light"] .section-title {
+  color: #111827;
+}
+
+:root[data-theme="light"] .hero-title {
+  color: #111827;
+}
+
 .bg-roxo {
   background: var(--bg-gradient) !important;
 }
