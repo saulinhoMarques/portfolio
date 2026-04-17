@@ -206,28 +206,28 @@
 
 /* Animações de hover para elementos específicos */
 .hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-lift:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .hover-scale {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-scale:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .hover-rotate {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-rotate:hover {
-  transform: rotate(5deg);
+  transform: rotate(5deg) scale(1.05);
 }
 
 /* Animação de texto digitando */
@@ -350,6 +350,31 @@
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
+/* Efeito de fade-out para preloader */
+.fade-out {
+  animation: fade-out 0.5s ease-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Efeito de show para elementos filtrados */
+.show {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.hidden {
+  display: none !important;
+}
+
 @keyframes blink-caret {
   from, to {
     border-color: transparent;
@@ -359,9 +384,14 @@
   }
 }
 
-/* Animações de progresso das habilidades */
+//* Animação de progresso das habilidades */
 .skill-progress-animated {
   animation: progressFill 2s ease-in-out;
+}
+
+/* Animação de progresso suave */
+.skill-progress.animated {
+  animation: progressFill 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 /* Efeito de parallax */
@@ -408,6 +438,127 @@
   }
 }
 
+/* ===== MICRO-INTERAÇÕES PROFISSIONAIS ===== */
+
+/* Smooth transitions para todos os elementos interativos */
+button, a, input, textarea, select {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efeito de ripple em botões */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.btn-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Efeito de underline animado */
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.underline-hover {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline-hover::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.underline-hover:hover::after {
+  width: 100%;
+}
+
+/* Efeito de bounce suave */
+@keyframes bounce-smooth {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce-smooth {
+  animation: bounce-smooth 2s ease-in-out infinite;
+}
+
+/* Efeito de fade-in suave com delay */
+@keyframes fade-in-smooth {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-smooth {
+  animation: fade-in-smooth 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Efeito de gradient shift */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Efeito de focus ring profissional */
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.1), 0 0 0 5px rgba(111, 66, 193, 0.3);
+}
+
 /* Animações responsivas */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -436,5 +587,22 @@
     transform: none;
     opacity: 1;
   }
+  
+  /* Desabilitar animações complexas em mobile para melhor performance */
+  .shimmer::before,
+  .wave-effect::before {
+    animation: none;
+  }
+}
+
+/* Otimizações de performance */
+.will-animate {
+  will-change: transform, opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 

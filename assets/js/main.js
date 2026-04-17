@@ -1,13 +1,48 @@
-// ===== MAIN JAVASCRIPT FILE =====
+// ===== MAIN JAVASCRIPT FILE - PROFESSIONAL PORTFOLIO =====
+'use strict';
+
+// Cache de elementos do DOM
+const DOMCache = {
+    navbar: null,
+    navLinks: null,
+    sections: null,
+    backToTopBtn: null,
+    filterBtns: null,
+    projectItems: null,
+    skillBars: null,
+    counters: null
+};
+
+// Inicializar cache do DOM
+function initDOMCache() {
+    DOMCache.navbar = document.getElementById('mainNav');
+    DOMCache.navLinks = document.querySelectorAll('.nav-link');
+    DOMCache.sections = document.querySelectorAll('section[id]');
+    DOMCache.backToTopBtn = document.getElementById('back-to-top');
+    DOMCache.filterBtns = document.querySelectorAll('.filter-btn');
+    DOMCache.projectItems = document.querySelectorAll('.project-item');
+    DOMCache.skillBars = document.querySelectorAll('.skill-progress');
+    DOMCache.counters = document.querySelectorAll('.stat-number');
+}
+
+// Variáveis de controle para otimização
+let ticking = false;
+let lastScrollY = 0;
+const scrollThrottle = 16; // ~60fps
 
 document.addEventListener('DOMContentLoaded', function() {
+    initDOMCache();
+    
     // Inicializar AOS (Animate On Scroll)
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        offset: 100
-    });
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100,
+            disable: 'mobile'
+        });
+    }
 
     // Inicializar todas as funcionalidades
     initNavbar();
@@ -16,39 +51,39 @@ document.addEventListener('DOMContentLoaded', function() {
     initProjectFilters();
     initSkillBars();
     initCounters();
-    initTypingEffect();
-    initParticles();
-    initScrollReveal();
-    initParallax();
+    initAccessibility();
+    
+    // Remover funções desnecessárias para performance
+    // initTypingEffect();
+    // initParticles();
+    // initScrollReveal();
+    // initParallax();
 });
 
-// ===== NAVEGAÇÃO =====
+// ===== NAVEGAÇÃO OTIMIZADA =====
 function initNavbar() {
-    const navbar = document.getElementById('mainNav');
-    const navLinks = document.querySelectorAll('.nav-link');
+    if (!DOMCache.navbar) return;
     
-    // Efeito de scroll na navbar
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
-    // Scroll spy para destacar seção ativa
-    const sections = document.querySelectorAll('section[id]');
-    
-    window.addEventListener('scroll', function() {
-        const scrollPos = window.scrollY + 100;
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
         
-        sections.forEach(section => {
+        // Navbar scroll effect
+        if (scrollY > 100) {
+            DOMCache.navbar.classList.add('scrolled');
+        } else {
+            DOMCache.navbar.classList.remove('scrolled');
+        }
+        
+        // Scroll spy
+        const scrollPos = scrollY + 100;
+        
+        DOMCache.sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
             
             if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                navLinks.forEach(link => {
+                DOMCache.navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${sectionId}`) {
                         link.classList.add('active');
@@ -56,7 +91,10 @@ function initNavbar() {
                 });
             }
         });
-    });
+    };
+    
+    window.addEventListener('scroll', throttle(handleScroll, scrollThrottle));
+    handleScroll(); // Executar uma vez no carregamento
 }
 
 // ===== SCROLL SUAVE =====
@@ -102,27 +140,31 @@ function initBackToTop() {
     });
 }
 
-// ===== FILTROS DE PROJETOS =====
+// ===== FILTROS DE PROJETOS OTIMIZADOS =====
 function initProjectFilters() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectItems = document.querySelectorAll('.project-item');
+    if (!DOMCache.filterBtns.length) return;
     
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
+    DOMCache.filterBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
             const filter = this.getAttribute('data-filter');
             
             // Atualizar botão ativo
-            filterBtns.forEach(b => b.classList.remove('active'));
+            DOMCache.filterBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             
-            // Filtrar projetos
-            projectItems.forEach(item => {
+            // Filtrar projetos com CSS classes em vez de inline styles
+            DOMCache.projectItems.forEach(item => {
                 const category = item.getAttribute('data-category');
+                const shouldShow = filter === 'all' || category === filter;
                 
-                if (filter === 'all' || category === filter) {
-                    item.style.display = 'block';
-                    item.style.animation = 'fadeInUp 0.5s ease';
+                item.classList.toggle('hidden', !shouldShow);
+                if (shouldShow) {
+                    item.style.display = '';
+                    item.offsetHeight; // Trigger reflow
+                    item.classList.add('show');
                 } else {
+                    item.classList.remove('show');
                     item.style.display = 'none';
                 }
             });
@@ -130,64 +172,55 @@ function initProjectFilters() {
     });
 }
 
-// ===== BARRAS DE HABILIDADES =====
+// ===== BARRAS DE HABILIDADES OTIMIZADAS =====
 function initSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
+    if (!DOMCache.skillBars.length) return;
     
-    const animateSkillBars = () => {
-        skillBars.forEach(bar => {
-            const rect = bar.getBoundingClientRect();
-            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-            
-            if (isVisible && !bar.classList.contains('animated')) {
-                bar.classList.add('animated');
-                const width = bar.style.width;
-                bar.style.width = '0%';
-                
-                setTimeout(() => {
-                    bar.style.width = width;
-                    bar.style.transition = 'width 2s ease-in-out';
-                }, 100);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target);
             }
         });
-    };
+    }, { threshold: 0.5 });
     
-    window.addEventListener('scroll', animateSkillBars);
-    animateSkillBars(); // Executar uma vez no carregamento
+    DOMCache.skillBars.forEach(bar => observer.observe(bar));
 }
 
-// ===== CONTADORES ANIMADOS =====
+// ===== CONTADORES ANIMADOS OTIMIZADOS =====
 function initCounters() {
-    const counters = document.querySelectorAll('.stat-number');
+    if (!DOMCache.counters.length) return;
     
-    const animateCounters = () => {
-        counters.forEach(counter => {
-            const rect = counter.getBoundingClientRect();
-            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-            
-            if (isVisible && !counter.classList.contains('counted')) {
-                counter.classList.add('counted');
-                const target = parseInt(counter.textContent);
-                const increment = target / 50;
-                let current = 0;
-                
-                const updateCounter = () => {
-                    if (current < target) {
-                        current += increment;
-                        counter.textContent = Math.ceil(current) + '+';
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.textContent = target + '+';
-                    }
-                };
-                
-                updateCounter();
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                entry.target.classList.add('counted');
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
             }
         });
+    }, { threshold: 0.5 });
+    
+    DOMCache.counters.forEach(counter => observer.observe(counter));
+}
+
+function animateCounter(element) {
+    const target = parseInt(element.textContent);
+    const increment = target / 50;
+    let current = 0;
+    
+    const updateCounter = () => {
+        if (current < target) {
+            current += increment;
+            element.textContent = Math.ceil(current) + '+';
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target + '+';
+        }
     };
     
-    window.addEventListener('scroll', animateCounters);
-    animateCounters();
+    updateCounter();
 }
 
 // ===== EFEITO DE DIGITAÇÃO =====
@@ -311,13 +344,25 @@ function throttle(func, limit) {
     };
 }
 
-// Função para detectar dispositivo móvel
-function isMobile() {
-    return window.innerWidth <= 768;
-}
+// Função para detectar dispositivo móvel (com cache)
+const isMobile = (() => {
+    let cached = null;
+    return () => {
+        if (cached === null) {
+            cached = window.innerWidth <= 768;
+        }
+        return cached;
+    };
+})();
 
 // Função para adicionar classe quando elemento está visível
-function onElementVisible(element, callback) {
+function onElementVisible(element, callback, options = {}) {
+    const defaultOptions = {
+        threshold: 0.1,
+        rootMargin: '0px',
+        ...options
+    };
+    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -325,73 +370,106 @@ function onElementVisible(element, callback) {
                 observer.unobserve(entry.target);
             }
         });
-    });
+    }, defaultOptions);
     
     observer.observe(element);
 }
 
-// ===== EVENTOS DE RESIZE =====
+// ===== EVENTOS DE RESIZE OTIMIZADOS =====
 window.addEventListener('resize', debounce(() => {
-    // Reajustar elementos se necessário
-    if (isMobile()) {
-        // Ajustes específicos para mobile
-        document.body.classList.add('mobile');
-    } else {
-        document.body.classList.remove('mobile');
+    // Reajustar cache de mobile
+    const wasMobile = document.body.classList.contains('mobile');
+    const isNowMobile = window.innerWidth <= 768;
+    
+    if (isNowMobile !== wasMobile) {
+        document.body.classList.toggle('mobile', isNowMobile);
     }
 }, 250));
 
-// ===== PRELOADER (se necessário) =====
+// ===== PRELOADER OTIMIZADO =====
 window.addEventListener('load', () => {
     const preloader = document.querySelector('.preloader');
     if (preloader) {
-        preloader.style.opacity = '0';
+        preloader.classList.add('fade-out');
         setTimeout(() => {
-            preloader.style.display = 'none';
+            preloader.remove();
         }, 500);
     }
 });
 
 // ===== PERFORMANCE OPTIMIZATIONS =====
 
-// Otimizar scroll events
-const optimizedScroll = throttle(() => {
-    // Eventos de scroll otimizados já estão implementados acima
-}, 16); // ~60fps
-
-window.addEventListener('scroll', optimizedScroll);
-
-// ===== ACCESSIBILITY =====
-
-// Navegação por teclado
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
+// Usar RequestAnimationFrame para scroll events
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            lastScrollY = window.scrollY;
+            ticking = false;
+        });
+        ticking = true;
     }
 });
 
-document.addEventListener('mousedown', () => {
-    document.body.classList.remove('keyboard-navigation');
-});
+// ===== ACCESSIBILITY IMPROVEMENTS =====
+function initAccessibility() {
+    // Navegação por teclado
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Tab') {
+            document.body.classList.add('keyboard-navigation');
+        }
+    });
+
+    document.addEventListener('mousedown', () => {
+        document.body.classList.remove('keyboard-navigation');
+    });
+    
+    // Melhorar contraste em modo de alto contraste do SO
+    if (window.matchMedia('(prefers-contrast: more)').matches) {
+        document.documentElement.style.setProperty('--shadow-glow', '0 0 30px rgba(111, 66, 193, 0.6)');
+    }
+    
+    // Respeitar preferência de movimento reduzido
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.style.setProperty('--transition-fast', '0s');
+        document.documentElement.style.setProperty('--transition-normal', '0s');
+        document.documentElement.style.setProperty('--transition-slow', '0s');
+    }
+}
 
 // ===== ERROR HANDLING =====
 window.addEventListener('error', (e) => {
-    console.error('Erro capturado:', e.error);
-    // Aqui você pode implementar logging de erros se necessário
+    console.error('❌ Erro capturado:', e.error);
+    // Implementar logging de erros em produção
 });
 
+window.addEventListener('unhandledrejection', (e) => {
+    console.error('❌ Promise rejection:', e.reason);
+});
+
+// ===== PERFORMANCE MONITORING =====
+if (window.performance && window.performance.timing) {
+    window.addEventListener('load', () => {
+        const perfData = window.performance.timing;
+        const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+        console.log(`⚡ Tempo de carregamento: ${pageLoadTime}ms`);
+    });
+}
+
 // ===== CONSOLE MESSAGE =====
-console.log(`
-🚀 Portfólio Mr.IT carregado com sucesso!
-📧 Contato: contato@mrit.dev
+if (process.env.NODE_ENV !== 'production') {
+    console.log(`
+🚀 Portfólio Mr.IT - Modo Desenvolvimento
+📧 Contato: saulomqs975@gmail.com
 🌐 Desenvolvido com ❤️ e muito ☕
 `);
+}
 
 // Exportar funções para uso global se necessário
 window.PortfolioUtils = {
     debounce,
     throttle,
     isMobile,
-    onElementVisible
+    onElementVisible,
+    initDOMCache
 };
 

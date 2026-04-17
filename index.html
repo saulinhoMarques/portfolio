@@ -2,38 +2,50 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <meta name="description" content="Portfólio de Mr.IT - Desenvolvedor Front-end e Estudante da ETEC Francisco Morato. Especializado em HTML, CSS, JavaScript e projetos inovadores.">
-  <meta name="keywords" content="desenvolvedor, front-end, HTML, CSS, JavaScript, portfólio, ETEC, Francisco Morato">
-  <meta name="author" content="Mr.IT">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Portfólio profissional de Saulo Marques - Desenvolvedor Front-end especializado em HTML, CSS, JavaScript e tecnologias web modernas. Estudante da ETEC Francisco Morato.">
+  <meta name="keywords" content="desenvolvedor front-end, HTML5, CSS3, JavaScript, React, Bootstrap, portfólio, web design, ETEC">
+  <meta name="author" content="Saulo Marques">
+  <meta name="theme-color" content="#6f42c1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Mr.IT - Desenvolvedor Front-end">
-  <meta property="og:description" content="Portfólio de desenvolvedor front-end especializado em tecnologias web modernas">
+  <meta property="og:title" content="Saulo Marques - Desenvolvedor Front-end">
+  <meta property="og:description" content="Portfólio profissional de desenvolvedor front-end com experiência em HTML, CSS, JavaScript e frameworks modernos.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="assets/images/profile.jpg">
+  <meta property="og:url" content="https://saulinhomarques.github.io/portfolio/">
+  <meta property="og:image" content="https://saulinhomarques.github.io/portfolio/assets/images/profile.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mr.IT - Desenvolvedor Front-end">
-  <meta name="twitter:description" content="Portfólio de desenvolvedor front-end especializado em tecnologias web modernas">
-  <meta name="twitter:image" content="assets/images/profile.jpg">
+  <meta name="twitter:title" content="Saulo Marques - Desenvolvedor Front-end">
+  <meta name="twitter:description" content="Portfólio profissional com projetos em HTML, CSS, JavaScript e tecnologias web.">
+  <meta name="twitter:image" content="https://saulinhomarques.github.io/portfolio/assets/images/profile.jpg">
+  <meta name="twitter:creator" content="@saulinho.dev">
   
-  <title>Mr.IT - Desenvolvedor Front-end | Portfólio</title>
+  <title>Saulo Marques - Desenvolvedor Front-end | Portfólio Profissional</title>
   
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicon/favicon.png">
+  <link rel="manifest" href="manifest.json">
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- CSS Libraries -->
+  <!-- CSS Libraries (Preload Critical Resources) -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   
   <!-- Custom CSS -->
+  <link rel="preload" href="assets/css/styles.css" as="style">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/animations.css">
   <style>
@@ -59,9 +71,9 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-roxo fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand glow" href="#home">
-        <i class="fas fa-code me-2"></i>
-        <strong>Mr.IT</strong>
+            <a class="navbar-brand glow" href="#home" title="Saulo Marques - Desenvolvedor Front-end">
+        <i class="fas fa-code me-2" aria-hidden="true"></i>
+        <strong>Saulo Marques</strong>
       </a>
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -580,34 +592,48 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- JavaScript Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- JavaScript Libraries (Defer Loading) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   
-<!-- Script EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-<script>
+<!-- Script EmailJS (Defer Loading) -->
+<script defer src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script defer>
   (function(){
-    emailjs.init("E3FqdvN35Qn3i7XIY"); // sua Public Key
+    if (typeof emailjs !== 'undefined') {
+      emailjs.init("E3FqdvN35Qn3i7XIY");
+    }
   })();
 
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    emailjs.sendForm('service_ejuw27g', 'template_6yuxdh4', this)
-      .then(() => {
-        alert('Sugestão enviada com sucesso!');
-        this.reset();
-      }, (error) => {
-        alert('Erro ao enviar: ' + JSON.stringify(error));
+        if (typeof emailjs === 'undefined') {
+          console.error('EmailJS não carregado');
+          alert('Erro ao enviar. Tente novamente.');
+          return;
+        }
+
+        emailjs.sendForm('service_ejuw27g', 'template_6yuxdh4', this)
+          .then(() => {
+            alert('Sugestão enviada com sucesso!');
+            this.reset();
+          }, (error) => {
+            console.error('Erro ao enviar:', error);
+            alert('Erro ao enviar. Tente novamente.');
+          });
       });
+    }
   });
 </script>
-  <!-- Custom JavaScript -->
-  <script src="assets/js/theme.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/animations.js"></script>
-  <script src="assets/js/contact.js"></script>
+  <!-- Custom JavaScript (Defer Loading) -->
+  <script defer src="assets/js/theme.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/animations.js"></script>
+  <script defer src="assets/js/contact.js"></script>
 </body>
 </html>
 
