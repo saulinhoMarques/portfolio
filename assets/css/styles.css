@@ -71,13 +71,6 @@
   box-sizing: border-box;
   /* Força todos os elementos a respeitarem a largura da viewport */
   max-width: 100%;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-*::-webkit-scrollbar {
-  width: 0;
-  height: 0;
 }
 
 html {
@@ -839,6 +832,19 @@ section {
   white-space: nowrap;
 }
 
+/* Projetos não responsivos */
+#projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-item {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
 /* ===== CONTATO RESPONSIVO ===== */
 .contact-info {
   padding: var(--spacing-md);
@@ -1258,6 +1264,7 @@ h1, h2, h3, h4, h5, h6, p, span, div {
   .hero {
     padding-left: 15px !important;
     padding-right: 15px !important;
+    padding-top: 80px !important;
   }
   
   /* Ajusta botões para mobile */
