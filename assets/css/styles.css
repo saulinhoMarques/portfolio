@@ -1343,3 +1343,60 @@ body {
   overflow-y: auto !important;
 }
 
+
+
+/* ===== PARALLAX EFFECTS ===== */
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  will-change: transform;
+}
+
+.parallax-layer-1 {
+  background: radial-gradient(circle at 20% 50%, rgba(159, 121, 238, 0.15) 0%, transparent 50%);
+  transform: translateY(0px);
+}
+
+.parallax-layer-2 {
+  background: radial-gradient(circle at 80% 80%, rgba(111, 66, 193, 0.1) 0%, transparent 50%);
+  transform: translateY(0px);
+}
+
+.parallax-layer-3 {
+  background: radial-gradient(circle at 50% 0%, rgba(187, 134, 252, 0.08) 0%, transparent 50%);
+  transform: translateY(0px);
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Parallax effect para a imagem de perfil */
+.hero-image {
+  transform: translateY(0px);
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+/* Light mode parallax adjustments */
+:root[data-theme="light"] .parallax-layer-1 {
+  background: radial-gradient(circle at 20% 50%, rgba(93, 58, 138, 0.1) 0%, transparent 50%);
+}
+
+:root[data-theme="light"] .parallax-layer-2 {
+  background: radial-gradient(circle at 80% 80%, rgba(109, 40, 217, 0.08) 0%, transparent 50%);
+}
+
+:root[data-theme="light"] .parallax-layer-3 {
+  background: radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.06) 0%, transparent 50%);
+}

@@ -103,8 +103,13 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="hero d-flex align-items-center">
-    <div class="container">
+  <section id="home" class="hero d-flex align-items-center parallax-section" data-parallax-speed="0.5">
+    <!-- Parallax Background Layers -->
+    <div class="parallax-bg parallax-layer-1" data-parallax-offset="0"></div>
+    <div class="parallax-bg parallax-layer-2" data-parallax-offset="1"></div>
+    <div class="parallax-bg parallax-layer-3" data-parallax-offset="2"></div>
+    
+    <div class="container parallax-content">
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-right">
           <h1 class="hero-title glow mb-3">
@@ -536,6 +541,7 @@
 </script>
   <!-- Custom JavaScript (Defer Loading) -->
   <script defer src="assets/js/theme.js"></script>
+  <script defer src="assets/js/parallax.js"></script>
   <script defer src="assets/js/main.js"></script>
   <script defer src="assets/js/animations.js"></script>
   <script defer src="assets/js/contact.js"></script>
