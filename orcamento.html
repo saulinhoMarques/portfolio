@@ -381,22 +381,32 @@
         }, (error) => {
           console.error('Erro EmailJS:', error);
           
+          // Garantir que os valores existam para não quebrar a mensagem
+          const nome = templateParams.nome || 'Não informado';
+          const empresa = templateParams.empresa || 'Não informado';
+          const objetivo = templateParams.objetivo || 'Não informado';
+          const orcamento = templateParams.orcamento || 'Não informado';
+          const prazo = templateParams.prazo || 'Não informado';
+          const func = templateParams.func || 'Nenhuma';
+          const extra = templateParams.extra || '';
+
           // Criar mensagem formatada para o WhatsApp
           let zapMsg = `Olá Saulo! Tentei enviar um orçamento pelo site mas deu erro. Aqui estão os detalhes:\n\n`;
-          zapMsg += `*Nome:* ${templateParams.nome}\n`;
-          zapMsg += `*Empresa:* ${templateParams.empresa}\n`;
-          zapMsg += `*Objetivo:* ${templateParams.objetivo}\n`;
-          zapMsg += `*Orçamento:* ${templateParams.orcamento}\n`;
-          zapMsg += `*Prazo:* ${templateParams.prazo}\n`;
-          zapMsg += `*Funcionalidades:* ${templateParams.func}\n`;
-          if(templateParams.extra) zapMsg += `*Extra:* ${templateParams.extra}`;
+          zapMsg += `*Nome:* ${nome}\n`;
+          zapMsg += `*Empresa:* ${empresa}\n`;
+          zapMsg += `*Objetivo:* ${objetivo}\n`;
+          zapMsg += `*Orçamento:* ${orcamento}\n`;
+          zapMsg += `*Prazo:* ${prazo}\n`;
+          zapMsg += `*Funcionalidades:* ${func}\n`;
+          if(extra) zapMsg += `*Extra:* ${extra}`;
 
           const encodedMsg = encodeURIComponent(zapMsg);
-          const zapUrl = `https://wa.me/5511997274119?text=${encodedMsg}`;
+          const zapUrl = `https://api.whatsapp.com/send?phone=5511997274119&text=${encodedMsg}`;
 
-          if (confirm('Ocorreu um erro ao enviar por e-mail (' + (error.text || error.status || 'Erro') + ').\n\nDeseja enviar essas informações agora mesmo pelo WhatsApp para não perder o que preencheu?')) {
-            window.open(zapUrl, '_blank');
-          }
+          alert('Ocorreu um erro ao enviar por e-mail (' + (error.text || error.status || 'Erro') + '). Vamos te redirecionar para o WhatsApp para você não perder os dados preenchidos.');
+          
+          // Redirecionamento direto para evitar bloqueio de pop-up
+          window.location.href = zapUrl;
           
           btn.innerHTML = originalText;
           btn.disabled = false;
