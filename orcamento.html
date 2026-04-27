@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Solicite um orçamento para o seu projeto web com Saulo Marques.">
+  <meta name="author" content="Saulo Marques">
+  <meta name="theme-color" content="#6f42c1">
+  
+  <title>Solicitar Orçamento | Saulo Marques</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicon/favicon.png">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <style>
+    .orcamento-section {
+      padding-top: 120px;
+      padding-bottom: 60px;
+      min-height: 100vh;
+      background: var(--bg-primary);
+    }
+    
+    .form-card {
+      background: var(--bg-secondary);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    :root[data-theme="light"] .form-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+    }
+    
+    .form-label {
+      font-weight: 500;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    
+    .form-section-title {
+      color: var(--secondary-color);
+      font-weight: 600;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .form-check-input:checked {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+    
+    .btn-submit {
+      background: var(--bg-gradient);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-weight: 600;
+      width: 100%;
+      margin-top: 30px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-submit:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow);
+      color: white;
+    }
+    
+    .back-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 20px;
+      transition: color 0.3s ease;
+    }
+    
+    .back-link:hover {
+      color: var(--primary-light);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-roxo fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand glow" href="index.html">
+        <i class="fas fa-code me-2"></i>
+        <strong>Saulo Marques</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#projetos">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="orcamento.html">Orçamento</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="orcamento-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up">
+          <a href="index.html" class="back-link">
+            <i class="fas fa-arrow-left"></i> Voltar para o Início
+          </a>
+          
+          <div class="form-card">
+            <h2 class="section-title glow mb-4 text-center">Solicitar Orçamento</h2>
+            <p class="text-center mb-5">Preencha as informações abaixo para que eu possa entender melhor sua necessidade e enviar uma proposta personalizada.</p>
+            
+            <form id="orcamento-form">
+              <!-- Informações Básicas -->
+              <h4 class="form-section-title"><i class="fas fa-user"></i> Informações Básicas</h4>
+              <div class="row">
+                <div class="col-md-12 mb-3">
+                  <label for="nome" class="form-label">Nome Completo</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required placeholder="Seu nome">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email" name="email" required placeholder="seu@email.com">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="whatsapp" class="form-label">WhatsApp</label>
+                  <input type="tel" class="form-control" id="whatsapp" name="whatsapp" required placeholder="(00) 00000-0000">
+                </div>
+              </div>
+
+              <!-- Sobre o Negócio -->
+              <h4 class="form-section-title"><i class="fas fa-briefcase"></i> Sobre o Negócio</h4>
+              <div class="mb-3">
+                <label for="empresa" class="form-label">Qual o nome da sua empresa?</label>
+                <input type="text" class="form-control" id="empresa" name="empresa" required placeholder="Nome da empresa">
+              </div>
+              <div class="mb-3">
+                <label for="faz" class="form-label">O que sua empresa faz?</label>
+                <textarea class="form-control" id="faz" name="faz" rows="3" required placeholder="Descreva brevemente o seu negócio"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="redes" class="form-label">Você já tem redes sociais ou site?</label>
+                <input type="text" class="form-control" id="redes" name="redes" placeholder="Links das redes ou site atual">
+              </div>
+
+              <!-- Objetivo do Site -->
+              <h4 class="form-section-title"><i class="fas fa-bullseye"></i> Objetivo do Site</h4>
+              <div class="mb-3">
+                <label class="form-label d-block">Qual o objetivo do site?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="objetivo" id="obj1" value="Vender produtos">
+                  <label class="form-check-label" for="obj1">Vender produtos</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="objetivo" id="obj2" value="Mostrar serviços">
+                  <label class="form-check-label" for="obj2">Mostrar serviços</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="objetivo" id="obj3" value="Portfólio">
+                  <label class="form-check-label" for="obj3">Portfólio</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="objetivo" id="obj4" value="Landing page">
+                  <label class="form-check-label" for="obj4">Landing page</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="objetivo" id="obj5" value="Outro">
+                  <label class="form-check-label" for="obj5">Outro</label>
+                </div>
+              </div>
+              
+              <div class="mb-3">
+                <label class="form-label d-block">O que você espera que o cliente faça no site?</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="acao_cliente" id="acao1" value="Comprar">
+                  <label class="form-check-label" for="acao1">Comprar</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="acao_cliente" id="acao2" value="Entrar em contato">
+                  <label class="form-check-label" for="acao2">Entrar em contato</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="acao_cliente" id="acao3" value="Ver informações">
+                  <label class="form-check-label" for="acao3">Ver informações</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="acao_cliente" id="acao4" value="Outro">
+                  <label class="form-check-label" for="acao4">Outro</label>
+                </div>
+              </div>
+
+              <!-- Estilo e Design -->
+              <h4 class="form-section-title"><i class="fas fa-paint-brush"></i> Estilo e Design</h4>
+              <div class="mb-3">
+                <label for="referencia" class="form-label">Você tem algum site como referência?</label>
+                <input type="text" class="form-control" id="referencia" name="referencia" placeholder="Ex: www.site.com.br">
+              </div>
+              <div class="mb-3">
+                <label class="form-label d-block">Prefere um site mais:</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="estilo" id="est1" value="Simples">
+                  <label class="form-check-label" for="est1">Simples</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="estilo" id="est2" value="Moderno">
+                  <label class="form-check-label" for="est2">Moderno</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="estilo" id="est3" value="Chamativo">
+                  <label class="form-check-label" for="est3">Chamativo</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="estilo" id="est4" value="Minimalista">
+                  <label class="form-check-label" for="est4">Minimalista</label>
+                </div>
+              </div>
+
+              <!-- Funcionalidades -->
+              <h4 class="form-section-title"><i class="fas fa-cog"></i> Funcionalidades</h4>
+              <div class="mb-3">
+                <label class="form-label d-block">O site precisa de:</label>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="func" id="func1" value="Formulário de contato">
+                      <label class="form-check-label" for="func1">Formulário de contato</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="func" id="func2" value="Integração com WhatsApp">
+                      <label class="form-check-label" for="func2">Integração com WhatsApp</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="func" id="func3" value="Sistema de login">
+                      <label class="form-check-label" for="func3">Sistema de login</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="func" id="func4" value="Painel administrativo">
+                      <label class="form-check-label" for="func4">Painel administrativo</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="func" id="func5" value="Loja (e-commerce)">
+                      <label class="form-check-label" for="func5">Loja (e-commerce)</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Orçamento e Prazo -->
+              <h4 class="form-section-title"><i class="fas fa-dollar-sign"></i> Orçamento e Prazo</h4>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label d-block">Qual seu orçamento?</label>
+                  <select class="form-select" name="orcamento" required>
+                    <option value="" selected disabled>Selecione uma opção</option>
+                    <option value="Até R$500">Até R$500</option>
+                    <option value="R$500 - R$1000">R$500 - R$1000</option>
+                    <option value="R$1000+">R$1000+</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="prazo" class="form-label">Quando precisa do site pronto?</label>
+                  <input type="text" class="form-control" id="prazo" name="prazo" required placeholder="Ex: 1 mês, 15 dias...">
+                </div>
+              </div>
+
+              <!-- Extra -->
+              <h4 class="form-section-title"><i class="fas fa-plus"></i> Extra</h4>
+              <div class="mb-3">
+                <label for="extra" class="form-label">Alguma observação ou ideia adicional?</label>
+                <textarea class="form-control" id="extra" name="extra" rows="4" placeholder="Conte-me mais sobre sua ideia..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane me-2"></i> Enviar Solicitação
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 bg-dark text-white text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2024 Saulo Marques. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  
+  <script>
+    // Inicialização do AOS
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Inicialização do EmailJS
+    (function(){
+      emailjs.init("E3FqdvN35Qn3i7XIY");
+    })();
+
+    // Lógica do Formulário
+    document.getElementById('orcamento-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const btn = this.querySelector('.btn-submit');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Enviando...';
+      btn.disabled = true;
+
+      // Preparar dados para o EmailJS
+      // Nota: O template_6yuxdh4 parece ser o que você já usa. 
+      // Idealmente você criaria um template específico para orçamento no EmailJS,
+      // mas vou usar o sendForm que envia todos os campos do formulário.
+      
+      emailjs.sendForm('service_ejuw27g', 'template_6yuxdh4', this)
+        .then(() => {
+          alert('Solicitação de orçamento enviada com sucesso! Entrarei em contato em breve.');
+          this.reset();
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, (error) => {
+          console.error('Erro ao enviar:', error);
+          alert('Ocorreu um erro ao enviar. Por favor, tente novamente ou entre em contato via WhatsApp.');
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        });
+    });
+
+    // Lógica de Tema (Sincronizada com o main.js)
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    
+    // Verificar tema salvo
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    htmlElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      htmlElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      const icon = themeToggle.querySelector('i');
+      if (theme === 'light') {
+        icon.className = 'fas fa-sun';
+      } else {
+        icon.className = 'fas fa-moon';
+      }
+    }
+  </script>
+</body>
+</html>
