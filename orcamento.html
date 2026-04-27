@@ -340,25 +340,47 @@
     document.getElementById('orcamento-form').addEventListener('submit', function(event) {
       event.preventDefault();
       
+      if (typeof emailjs === 'undefined') {
+        alert('Erro: O serviço de e-mail não foi carregado corretamente. Por favor, tente novamente ou use o WhatsApp.');
+        return;
+      }
+
       const btn = this.querySelector('.btn-submit');
       const originalText = btn.innerHTML;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Enviando...';
       btn.disabled = true;
 
-      // Preparar dados para o EmailJS
-      // Nota: O template_6yuxdh4 parece ser o que você já usa. 
-      // Idealmente você criaria um template específico para orçamento no EmailJS,
-      // mas vou usar o sendForm que envia todos os campos do formulário.
+      // Coletar valores de checkboxes e radios para garantir que sejam enviados corretamente
+      const formData = new FormData(this);
+      const templateParams = {};
       
-      emailjs.sendForm('service_ejuw27g', 'template_pplc3fq', this)
+      formData.forEach((value, key) => {
+        if (templateParams[key]) {
+          if (!Array.isArray(templateParams[key])) {
+            templateParams[key] = [templateParams[key]];
+          }
+          templateParams[key].push(value);
+        } else {
+          templateParams[key] = value;
+        }
+      });
+
+      // Converter arrays em strings legíveis
+      for (let key in templateParams) {
+        if (Array.isArray(templateParams[key])) {
+          templateParams[key] = templateParams[key].join(', ');
+        }
+      }
+
+      emailjs.send('service_ejuw27g', 'template_pplc3fq', templateParams)
         .then(() => {
           alert('Solicitação de orçamento enviada com sucesso! Entrarei em contato em breve.');
           this.reset();
           btn.innerHTML = originalText;
           btn.disabled = false;
         }, (error) => {
-          console.error('Erro ao enviar:', error);
-          alert('Ocorreu um erro ao enviar. Por favor, tente novamente ou entre em contato via WhatsApp.');
+          console.error('Erro EmailJS:', error);
+          alert('Erro ao enviar (' + (error.text || error.status || 'Erro desconhecido') + '). Por favor, tente novamente ou entre em contato via WhatsApp.');
           btn.innerHTML = originalText;
           btn.disabled = false;
         });
