@@ -380,7 +380,24 @@
           btn.disabled = false;
         }, (error) => {
           console.error('Erro EmailJS:', error);
-          alert('Erro ao enviar (' + (error.text || error.status || 'Erro desconhecido') + '). Por favor, tente novamente ou entre em contato via WhatsApp.');
+          
+          // Criar mensagem formatada para o WhatsApp
+          let zapMsg = `Olá Saulo! Tentei enviar um orçamento pelo site mas deu erro. Aqui estão os detalhes:\n\n`;
+          zapMsg += `*Nome:* ${templateParams.nome}\n`;
+          zapMsg += `*Empresa:* ${templateParams.empresa}\n`;
+          zapMsg += `*Objetivo:* ${templateParams.objetivo}\n`;
+          zapMsg += `*Orçamento:* ${templateParams.orcamento}\n`;
+          zapMsg += `*Prazo:* ${templateParams.prazo}\n`;
+          zapMsg += `*Funcionalidades:* ${templateParams.func}\n`;
+          if(templateParams.extra) zapMsg += `*Extra:* ${templateParams.extra}`;
+
+          const encodedMsg = encodeURIComponent(zapMsg);
+          const zapUrl = `https://wa.me/5511997274119?text=${encodedMsg}`;
+
+          if (confirm('Ocorreu um erro ao enviar por e-mail (' + (error.text || error.status || 'Erro') + ').\n\nDeseja enviar essas informações agora mesmo pelo WhatsApp para não perder o que preencheu?')) {
+            window.open(zapUrl, '_blank');
+          }
+          
           btn.innerHTML = originalText;
           btn.disabled = false;
         });
