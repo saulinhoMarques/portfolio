@@ -22,7 +22,9 @@
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
-  --shadow-glow: 0 0 20px rgba(159, 121, 238, 0.3);
+  --shadow-glow: 0 0 30px rgba(111, 66, 193, 0.4);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
   
   /* Transições */
   --transition-fast: 0.2s ease;
@@ -265,8 +267,55 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :root[data-theme="light"] .project-card {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--secondary-color);
+  box-shadow: var(--shadow-glow);
+}
+
+.service-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 40px;
+  border-radius: 20px;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  background: rgba(111, 66, 193, 0.1);
+  border-color: var(--secondary-color);
+}
+
+.step-card {
+  position: relative;
+  padding: 30px;
+  background: var(--bg-secondary);
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.step-number {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
 }
 
 :root[data-theme="light"] .project-card:hover {
