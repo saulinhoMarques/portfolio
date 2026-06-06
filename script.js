@@ -61,3 +61,36 @@ if (backToTop) {
     });
   });
 }
+
+
+// Gerenciar tema claro/escuro
+const themeToggle = document.querySelector(".theme-toggle");
+
+// Carregar tema salvo no localStorage
+const savedTheme = localStorage.getItem("theme") || "light";
+if (savedTheme === "dark") {
+  document.body.classList.add("dark-theme");
+  if (themeToggle) {
+    themeToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
+  }
+} else {
+  if (themeToggle) {
+    themeToggle.innerHTML = '<i class="bi bi-moon-fill"></i>';
+  }
+}
+
+// Alternar tema ao clicar no botão
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-theme");
+    
+    // Atualizar ícone
+    const isDark = document.body.classList.contains("dark-theme");
+    themeToggle.innerHTML = isDark 
+      ? '<i class="bi bi-sun-fill"></i>' 
+      : '<i class="bi bi-moon-fill"></i>';
+    
+    // Salvar preferência no localStorage
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+  });
+}
