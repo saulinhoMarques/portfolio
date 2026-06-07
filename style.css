@@ -59,6 +59,11 @@ a {
   border-radius: 999px;
   margin-bottom: 16px;
   font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .section-tag {
+  background: rgba(37, 99, 235, 0.2);
 }
 
 .section-title {
@@ -177,6 +182,14 @@ body.dark-theme .theme-toggle:hover {
     linear-gradient(135deg, #f8fafc, #ffffff);
   display: flex;
   align-items: center;
+  transition: background 0.3s ease;
+}
+
+body.dark-theme .hero-section {
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.1), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.08), transparent 35%),
+    linear-gradient(135deg, #0f172a, #1a1f3a);
 }
 
 .hero-badge {
@@ -341,6 +354,11 @@ body.dark-theme .fake-site-preview {
   padding: 18px;
   margin-bottom: 20px;
   border: 1px solid var(--border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-theme .preview-content {
+  background: #0f172a;
 }
 
 .preview-title {
@@ -349,6 +367,11 @@ body.dark-theme .fake-site-preview {
   background: var(--dark);
   border-radius: 999px;
   margin-bottom: 14px;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .preview-title {
+  background: #64748b;
 }
 
 .preview-text {
@@ -357,6 +380,11 @@ body.dark-theme .fake-site-preview {
   background: #cbd5e1;
   border-radius: 999px;
   margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .preview-text {
+  background: #475569;
 }
 
 .preview-text.small {
@@ -375,6 +403,11 @@ body.dark-theme .fake-site-preview {
   background: var(--white);
   border-radius: 18px;
   border: 1px solid var(--border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark-theme .preview-grid div {
+  background: #1e293b;
 }
 
 .preview-button {
@@ -420,6 +453,11 @@ body.dark-theme .floating-card {
 
 .about-section {
   background: var(--white);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .about-section {
+  background: #0f172a;
 }
 
 .about-list {
@@ -455,6 +493,11 @@ body.dark-theme .about-list div {
 
 .services-section {
   background: var(--light);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .services-section {
+  background: #1a1f3a;
 }
 
 .service-card,
@@ -531,6 +574,11 @@ body.dark-theme .project-card {
 
 .models-section {
   background: var(--white);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .models-section {
+  background: #0f172a;
 }
 
 .featured-model {
@@ -607,6 +655,11 @@ body.dark-theme .project-card {
 
 .pricing-section {
   background: var(--light);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .pricing-section {
+  background: #1a1f3a;
 }
 
 .price-card {
@@ -668,12 +721,22 @@ body.dark-theme .project-card {
 
 .benefits-section {
   background: var(--white);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .benefits-section {
+  background: #0f172a;
 }
 
 /* Processo */
 
 .process-section {
   background: var(--light);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .process-section {
+  background: #1a1f3a;
 }
 
 .process-card span {
@@ -693,6 +756,11 @@ body.dark-theme .project-card {
 
 .projects-section {
   background: var(--white);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .projects-section {
+  background: #0f172a;
 }
 
 .project-card {
@@ -713,6 +781,11 @@ body.dark-theme .project-card {
 
 .faq-section {
   background: var(--light);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .faq-section {
+  background: #1a1f3a;
 }
 
 .custom-accordion {
@@ -765,6 +838,11 @@ body.dark-theme .accordion-button.collapsed {
 .final-cta {
   padding: 90px 0;
   background: var(--dark);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme .final-cta {
+  background: #ffffff;
 }
 
 .final-cta-box {
@@ -772,6 +850,11 @@ body.dark-theme .accordion-button.collapsed {
   max-width: 850px;
   margin: 0 auto;
   color: var(--white);
+  transition: color 0.3s ease;
+}
+
+body.dark-theme .final-cta-box {
+  color: var(--dark);
 }
 
 .final-cta-box h2 {
@@ -784,6 +867,11 @@ body.dark-theme .accordion-button.collapsed {
   color: #cbd5e1;
   font-size: 1.1rem;
   margin-bottom: 30px;
+  transition: color 0.3s ease;
+}
+
+body.dark-theme .final-cta-box p {
+  color: #64748b;
 }
 
 /* Footer */
@@ -792,6 +880,12 @@ body.dark-theme .accordion-button.collapsed {
   background: var(--dark-2);
   color: var(--white);
   padding: 60px 0 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme .footer {
+  background: #ffffff;
+  color: var(--dark);
 }
 
 .footer h3 {
@@ -805,6 +899,11 @@ body.dark-theme .accordion-button.collapsed {
 .footer p {
   color: #cbd5e1;
   margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+body.dark-theme .footer p {
+  color: #64748b;
 }
 
 .footer-contact i {
@@ -815,6 +914,11 @@ body.dark-theme .accordion-button.collapsed {
 .footer hr {
   border-color: rgba(255, 255, 255, 0.12);
   margin: 34px 0 20px;
+  transition: border-color 0.3s ease;
+}
+
+body.dark-theme .footer hr {
+  border-color: rgba(15, 23, 42, 0.12);
 }
 
 .footer-bottom {
@@ -828,6 +932,11 @@ body.dark-theme .accordion-button.collapsed {
 .footer-bottom a {
   color: var(--secondary);
   font-weight: 800;
+  transition: color 0.3s ease;
+}
+
+body.dark-theme .footer-bottom a {
+  color: var(--primary);
 }
 
 /* WhatsApp fixo */
