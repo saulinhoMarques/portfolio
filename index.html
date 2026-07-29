@@ -1,958 +1,1258 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Saulo Marques | Criação de Sites Profissionais</title>
-
-  <meta 
-    name="description" 
-    content="Saulo Marques, desenvolvedor web. Criação de sites profissionais para pequenos negócios, lojas, barbearias, salões e prestadores de serviço venderem mais pelo WhatsApp."
-  />
-
-  <meta 
-    name="keywords" 
-    content="Saulo Marques, desenvolvedor web, criação de sites, sites para pequenos negócios, site para loja, site para barbearia, site para prestador de serviço, landing page, portfólio web"
-  />
-
-  <meta name="author" content="Saulo da Silva Marques" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Criação de Sites Profissionais" />
-  <meta property="og:description" content="Sites modernos, responsivos e prontos para gerar contatos pelo WhatsApp." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://saulosm.com.br" />
-  <meta property="og:image" content="https://saulosm.com.br/assets/img/sites.png" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Saulo Marques | Criação de Sites Profissionais" />
-  <meta name="twitter:description" content="Criação de sites para pequenos negócios venderem mais pelo WhatsApp." />
-  <meta name="twitter:image" content="https://saulosm.com.br/assets/img/sites.png" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/img/favicon.jpg" type="img/png" />
-
-  <!-- Bootstrap -->
-  <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
-  />
-
-  <!-- Bootstrap Icons -->
-  <link 
-    rel="stylesheet" 
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-  />
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body id="top">
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
-    <div class="container">
-      <a class="navbar-brand" href="#top">
-        <span>Saulo</span>Marques
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+  <title>
+   Saulo Marques | Criação de Sites Profissionais
+  </title>
+  <meta content="Saulo Marques, desenvolvedor web. Criação de sites profissionais para pequenos negócios, lojas, barbearias, salões e prestadores de serviço venderem mais pelo WhatsApp." name="description"/>
+  <meta content="Saulo Marques, desenvolvedor web, criação de sites, sites para pequenos negócios, site para barbearia, landing page, portfólio web" name="keywords"/>
+  <meta content="Saulo da Silva Marques" name="author"/>
+  <meta content="Saulo Marques | Criação de Sites Profissionais" property="og:title"/>
+  <meta content="Sites modernos, responsivos e prontos para gerar contatos pelo WhatsApp." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://saulosm.com.br" property="og:url"/>
+  <meta content="https://saulosm.com.br/assets/img/sites.png" property="og:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Saulo Marques | Criação de Sites Profissionais" name="twitter:title"/>
+  <meta content="Criação de sites para pequenos negócios venderem mais pelo WhatsApp." name="twitter:description"/>
+  <meta content="https://saulosm.com.br/assets/img/sites.png" name="twitter:image"/>
+  <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!--$-->
+  <div class="min-h-screen scroll-smooth bg-background text-foreground" id="top">
+   <nav class="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-xl transition-all py-4" id="navbar">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-5">
+     <a class="text-xl font-black tracking-tight" href="#top">
+      <span class="text-primary">
+       Saulo
+      </span>
+      Marques
+     </a>
+     <div class="hidden items-center gap-7 lg:flex">
+      <a class="text-sm font-bold text-foreground/80 transition hover:text-primary" href="#sobre">
+       Sobre
       </a>
-
-      <button 
-        class="navbar-toggler" 
-        type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#menuPrincipal"
-        aria-controls="menuPrincipal"
-        aria-expanded="false"
-        aria-label="Abrir menu"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="menuPrincipal">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#sobre">Sobre</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#servicos">Serviços</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#modelos">Modelos</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#pacotes">Pacotes</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#processo">Processo</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#faq">Dúvidas</a>
-          </li>
-
-          <li class="nav-item">
-            <button class="theme-toggle" title="Alternar tema" aria-label="Alternar tema claro/escuro">
-              <i class="bi bi-moon-fill"></i>
-            </button>
-          </li>
-
-          <li class="nav-item ms-lg-3">
-            <a 
-              class="btn btn-whatsapp btn-sm"
-              href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vi%20seu%20portfólio%20e%20quero%20um%20orçamento%20para%20um%20site."
-              target="_blank"
-            >
-              <i class="bi bi-whatsapp"></i>
-              Orçamento
-            </a>
-          </li>
-        </ul>
-      </div>
+      <a class="text-sm font-bold text-foreground/80 transition hover:text-primary" href="#servicos">
+       Serviços
+      </a>
+      <a class="text-sm font-bold text-foreground/80 transition hover:text-primary" href="#modelos">
+       Modelos
+      </a>
+      <a class="text-sm font-bold text-foreground/80 transition hover:text-primary" href="#pacotes">
+       Pacotes
+      </a>
+      <a class="text-sm font-bold text-foreground/80 transition hover:text-primary" href="#processo">
+       Processo
+      </a>
+      <a class="text-sm font-bold text-foreground/80 transition hover:text-primary" href="#faq">
+       Dúvidas
+      </a>
+      <a class="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-bold text-whatsapp-foreground transition hover:brightness-95 px-5 py-2 text-sm" href="https://wa.me/5511997274119?text=Ol%C3%A1%2C%20Saulo!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20um%20or%C3%A7amento%20para%20um%20site." rel="noreferrer" target="_blank">
+       <svg aria-hidden="true" class="lucide lucide-message-circle size-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719">
+        </path>
+       </svg>
+       Orçamento
+      </a>
+     </div>
+     <button aria-label="Abrir menu" class="rounded-xl border border-border p-2 lg:hidden" id="menu-toggle" type="button">
+      <svg aria-hidden="true" class="lucide lucide-menu size-5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+       <path d="M4 5h16">
+       </path>
+       <path d="M4 12h16">
+       </path>
+       <path d="M4 19h16">
+       </path>
+      </svg>
+     </button>
     </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero-section">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <span class="hero-badge">
-            Desenvolvedor Web
-          </span>
-
-          <h1>
-            Crio sites profissionais para pequenos negócios venderem mais pelo WhatsApp
-          </h1>
-
-          <p class="hero-subtitle">
-            Sou Saulo Marques, desenvolvedor web. Crio sites modernos, responsivos e personalizados para empresas que querem apresentar seus produtos, serviços e receber contatos direto pelo WhatsApp.
-          </p>
-
-          <div class="hero-buttons">
-            <a 
-              href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vi%20seu%20portfólio%20e%20quero%20criar%20um%20site%20para%20meu%20negócio."
-              target="_blank"
-              class="btn btn-main"
-            >
-              <i class="bi bi-whatsapp"></i>
-              Solicitar orçamento
-            </a>
-
-            <a href="#modelos" class="btn btn-outline-custom">
-              Ver modelos prontos
-            </a>
-          </div>
-
-          <div class="hero-info">
-            <div>
-              <strong>3</strong>
-              <span>modelos publicados</span>
-            </div>
-
-            <div>
-              <strong>100%</strong>
-              <span>responsivo</span>
-            </div>
-
-            <div>
-              <strong>WhatsApp</strong>
-              <span>integrado</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="hero-card">
-            <div class="browser-dots">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-            <div class="fake-site-preview">
-              <div class="preview-header"></div>
-
-              <div class="preview-content">
-                <div class="preview-title"></div>
-                <div class="preview-text"></div>
-                <div class="preview-text small"></div>
-              </div>
-
-              <div class="preview-grid">
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-
-              <div class="preview-button"></div>
-            </div>
-
-            <div class="floating-card card-one">
-              <i class="bi bi-phone"></i>
-              Mobile
-            </div>
-
-            <div class="floating-card card-two">
-              <i class="bi bi-whatsapp"></i>
-              Contato rápido
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="mx-auto mt-3 max-w-6xl px-5 lg:hidden" hidden="" id="mobile-menu">
+     <div class="flex flex-col gap-3 rounded-3xl border border-border bg-card p-5 shadow-[var(--shadow-soft)]">
+      <a class="font-bold text-foreground/80" href="#sobre">
+       Sobre
+      </a>
+      <a class="font-bold text-foreground/80" href="#servicos">
+       Serviços
+      </a>
+      <a class="font-bold text-foreground/80" href="#modelos">
+       Modelos
+      </a>
+      <a class="font-bold text-foreground/80" href="#pacotes">
+       Pacotes
+      </a>
+      <a class="font-bold text-foreground/80" href="#processo">
+       Processo
+      </a>
+      <a class="font-bold text-foreground/80" href="#faq">
+       Dúvidas
+      </a>
+      <a class="mt-1 inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-bold text-whatsapp-foreground transition hover:brightness-95" href="https://wa.me/5511997274119?text=Ol%C3%A1%2C%20Saulo%21%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20um%20or%C3%A7amento%20para%20um%20site." rel="noreferrer" target="_blank">
+       Orçamento
+      </a>
+     </div>
     </div>
-  </header>
-
-  <!-- Sobre -->
-  <section class="section-padding about-section" id="sobre">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-5">
-          <span class="section-tag">Sobre mim</span>
-
-          <h2>
-            Desenvolvedor focado em sites simples, bonitos e que ajudam negócios locais.
-          </h2>
-        </div>
-
-        <div class="col-lg-7">
-          <p class="section-text">
-            Meu nome é <strong>Saulo da Silva Marques</strong>, sou desenvolvedor web e trabalho com criação de sites para pequenos negócios que querem ter uma presença online mais profissional.
-          </p>
-
-          <p class="section-text">
-            Meu foco é criar sites objetivos, rápidos, responsivos e com uma comunicação direta para transformar visitantes em contatos pelo WhatsApp.
-          </p>
-
-          <div class="about-list">
-            <div>
-              <i class="bi bi-code-slash"></i>
-              <span>HTML, CSS, JavaScript e Bootstrap</span>
-            </div>
-
-            <div>
-              <i class="bi bi-phone"></i>
-              <span>Sites adaptados para celular</span>
-            </div>
-
-            <div>
-              <i class="bi bi-search"></i>
-              <span>SEO básico e compartilhamento profissional</span>
-            </div>
-
-            <div>
-              <i class="bi bi-whatsapp"></i>
-              <span>Botões estratégicos para WhatsApp</span>
-            </div>
-          </div>
-        </div>
-      </div>
+   </nav>
+   <header class="relative overflow-hidden bg-surface pb-24 pt-36">
+    <div class="pointer-events-none absolute -right-40 -top-40 size-[32rem] rounded-full bg-primary/10 blur-3xl">
     </div>
-  </section>
-
-  <!-- Serviços -->
-  <section class="section-padding services-section" id="servicos">
-    <div class="container">
-      <div class="section-title text-center">
-        <span class="section-tag">Serviços</span>
-
-        <h2>
-          O que eu posso criar para o seu negócio?
-        </h2>
-
-        <p>
-          Sites pensados para apresentar sua empresa, gerar confiança e facilitar o contato com seus clientes.
-        </p>
+    <div class="mx-auto grid max-w-6xl items-center gap-14 px-5 lg:grid-cols-2">
+     <div>
+      <span class="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-extrabold text-primary">
+       Desenvolvedor Web
+      </span>
+      <h1 class="mt-4 text-[clamp(2.2rem,5vw,3.6rem)] font-black leading-[1.05] tracking-tight">
+       Crio sites profissionais para pequenos negócios
+       <!-- -->
+       <span class="text-primary">
+        venderem mais pelo WhatsApp
+       </span>
+      </h1>
+      <p class="mt-6 max-w-xl text-lg text-muted-foreground">
+       Sou Saulo Marques, desenvolvedor web. Crio sites modernos, responsivos e personalizados para empresas que querem apresentar seus produtos, serviços e receber contatos direto pelo WhatsApp.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+       <a class="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-bold text-whatsapp-foreground transition hover:brightness-95 px-7 py-4" href="https://wa.me/5511997274119?text=Ol%C3%A1%2C%20Saulo!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20criar%20um%20site%20para%20meu%20neg%C3%B3cio." rel="noreferrer" target="_blank">
+        <svg aria-hidden="true" class="lucide lucide-message-circle size-5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719">
+         </path>
+        </svg>
+        Solicitar orçamento
+       </a>
+       <a class="inline-flex items-center justify-center rounded-full border-2 border-primary px-7 py-4 font-bold text-primary transition hover:bg-primary hover:text-primary-foreground" href="#modelos">
+        Ver modelos prontos
+       </a>
       </div>
-
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <i class="bi bi-window"></i>
-
-            <h3>Site institucional</h3>
-
-            <p>
-              Uma página profissional para apresentar sua empresa, serviços, localização, redes sociais e contato.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <i class="bi bi-bag-check"></i>
-
-            <h3>Site vitrine</h3>
-
-            <p>
-              Ideal para mostrar produtos, coleções, serviços, fotos, preços e direcionar o cliente para o WhatsApp.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <i class="bi bi-rocket-takeoff"></i>
-
-            <h3>Landing page</h3>
-
-            <p>
-              Página focada em conversão, perfeita para campanhas, divulgação de serviços ou apresentação de oferta.
-            </p>
-          </div>
-        </div>
+      <div class="mt-10 grid max-w-md grid-cols-3 gap-4">
+       <div>
+        <strong class="block text-2xl font-black text-primary">
+         3
+        </strong>
+        <span class="text-sm text-muted-foreground">
+         modelos publicados
+        </span>
+       </div>
+       <div>
+        <strong class="block text-2xl font-black text-primary">
+         100%
+        </strong>
+        <span class="text-sm text-muted-foreground">
+         responsivo
+        </span>
+       </div>
+       <div>
+        <strong class="block text-2xl font-black text-primary">
+         WhatsApp
+        </strong>
+        <span class="text-sm text-muted-foreground">
+         integrado
+        </span>
+       </div>
       </div>
+     </div>
+     <div class="relative">
+      <div class="rounded-[var(--radius)] border border-border bg-card p-5 shadow-[var(--shadow-elegant)]">
+       <div class="mb-4 flex gap-2">
+        <span class="size-3 rounded-full bg-destructive/70">
+        </span>
+        <span class="size-3 rounded-full bg-primary/40">
+        </span>
+        <span class="size-3 rounded-full bg-whatsapp/70">
+        </span>
+       </div>
+       <div class="space-y-4 rounded-2xl bg-surface p-5">
+        <div class="h-24 rounded-xl bg-[image:var(--gradient-primary)]">
+        </div>
+        <div class="space-y-2">
+         <div class="h-4 w-2/3 rounded-full bg-foreground/15">
+         </div>
+         <div class="h-3 w-full rounded-full bg-foreground/10">
+         </div>
+         <div class="h-3 w-4/5 rounded-full bg-foreground/10">
+         </div>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+         <div class="h-16 rounded-xl bg-foreground/10">
+         </div>
+         <div class="h-16 rounded-xl bg-foreground/10">
+         </div>
+         <div class="h-16 rounded-xl bg-foreground/10">
+         </div>
+        </div>
+        <div class="h-10 w-40 rounded-full bg-whatsapp/80">
+        </div>
+       </div>
+      </div>
+      <div class="absolute -left-4 top-10 hidden items-center gap-2 rounded-2xl border border-border bg-card px-4 py-3 text-sm font-bold shadow-[var(--shadow-soft)] sm:flex">
+       <svg aria-hidden="true" class="lucide lucide-smartphone size-4 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <rect height="20" rx="2" ry="2" width="14" x="5" y="2">
+        </rect>
+        <path d="M12 18h.01">
+        </path>
+       </svg>
+       Mobile
+      </div>
+      <div class="absolute -bottom-5 right-2 hidden items-center gap-2 rounded-2xl border border-border bg-card px-4 py-3 text-sm font-bold shadow-[var(--shadow-soft)] sm:flex">
+       <svg aria-hidden="true" class="lucide lucide-message-circle size-4 text-whatsapp" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719">
+        </path>
+       </svg>
+       Contato rápido
+      </div>
+     </div>
     </div>
-  </section>
-
-  <!-- Modelos -->
-  <section class="section-padding models-section" id="modelos">
-    <div class="container">
-      <div class="section-title text-center">
-        <span class="section-tag">Modelos publicados</span>
-
-        <h2>
-          Veja modelos reais funcionando
-        </h2>
-
-        <p>
-          Escolha um modelo pronto como base para o seu site.
-        </p>
+   </header>
+   <section class="py-24" id="sobre">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-[5fr_7fr]">
+     <div>
+      <span class="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-extrabold text-primary">
+       Sobre mim
+      </span>
+      <h2 class="mt-4 text-[clamp(1.8rem,3.5vw,2.6rem)] font-black leading-tight tracking-tight">
+       Desenvolvedor focado em sites simples, bonitos e que ajudam negócios locais.
+      </h2>
+     </div>
+     <div>
+      <p class="text-lg text-muted-foreground">
+       Meu nome é
+       <strong class="text-foreground">
+        Saulo da Silva Marques
+       </strong>
+       , sou desenvolvedor web e trabalho com criação de sites para pequenos negócios que querem ter uma presença online mais profissional.
+      </p>
+      <p class="mt-4 text-lg text-muted-foreground">
+       Meu foco é criar sites objetivos, rápidos, responsivos e com uma comunicação direta para transformar visitantes em contatos pelo WhatsApp.
+      </p>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2">
+       <div class="flex items-center gap-3 rounded-2xl border border-border bg-card p-4 font-semibold">
+        <svg aria-hidden="true" class="lucide lucide-code-xml size-5 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="m18 16 4-4-4-4">
+         </path>
+         <path d="m6 8-4 4 4 4">
+         </path>
+         <path d="m14.5 4-5 16">
+         </path>
+        </svg>
+        <span class="text-sm">
+         HTML, CSS, JavaScript e Bootstrap
+        </span>
+       </div>
+       <div class="flex items-center gap-3 rounded-2xl border border-border bg-card p-4 font-semibold">
+        <svg aria-hidden="true" class="lucide lucide-smartphone size-5 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <rect height="20" rx="2" ry="2" width="14" x="5" y="2">
+         </rect>
+         <path d="M12 18h.01">
+         </path>
+        </svg>
+        <span class="text-sm">
+         Sites adaptados para celular
+        </span>
+       </div>
+       <div class="flex items-center gap-3 rounded-2xl border border-border bg-card p-4 font-semibold">
+        <svg aria-hidden="true" class="lucide lucide-search size-5 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="m21 21-4.34-4.34">
+         </path>
+         <circle cx="11" cy="11" r="8">
+         </circle>
+        </svg>
+        <span class="text-sm">
+         SEO básico e compartilhamento profissional
+        </span>
+       </div>
+       <div class="flex items-center gap-3 rounded-2xl border border-border bg-card p-4 font-semibold">
+        <svg aria-hidden="true" class="lucide lucide-message-circle size-5 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719">
+         </path>
+        </svg>
+        <span class="text-sm">
+         Botões estratégicos para WhatsApp
+        </span>
+       </div>
       </div>
-
-      <div class="row g-4">
-        <!-- Modelo 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="model-card">
-            <div class="model-icon">
-              <i class="bi bi-bag-heart"></i>
-            </div>
-
-            <h3>Loja Infantil / Roupas</h3>
-
-            <p>
-              Ideal para lojas de roupas, acessórios, enxoval, calçados, brechós e pequenos comércios.
-            </p>
-
-            <ul>
-              <li>Produtos em destaque</li>
-              <li>Botão para pedido no WhatsApp</li>
-              <li>Galeria, localização e redes sociais</li>
-            </ul>
-
-            <div class="model-buttons">
-              <a 
-                href="https://saulinhomarques.github.io/template1"
-                target="_blank" 
-                class="btn btn-model"
-              >
-                Ver demonstração
-              </a>
-
-              <a 
-                href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vi%20o%20modelo%20de%20loja%20infantil%20e%20quero%20adaptar%20para%20meu%20negócio."
-                target="_blank"
-                class="btn btn-whatsapp-outline"
-              >
-                Quero esse
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="model-card featured-model">
-            <span class="model-label">Muito procurado</span>
-
-            <div class="model-icon">
-              <i class="bi bi-scissors"></i>
-            </div>
-
-            <h3>Barbearia / Salão</h3>
-
-            <p>
-              Ideal para barbearias, salões, estética, manicure, studios de tatuagem e beleza em geral.
-            </p>
-
-            <ul>
-              <li>Lista de serviços e preços</li>
-              <li>Agendamento pelo WhatsApp</li>
-              <li>Galeria, equipe e depoimentos</li>
-            </ul>
-
-            <div class="model-buttons">
-              <a 
-                href="https://saulinhomarques.github.io/template2"
-                target="_blank" 
-                class="btn btn-model"
-              >
-                Ver demonstração
-              </a>
-
-              <a 
-                href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vi%20o%20modelo%20de%20barbearia%20e%20quero%20um%20site%20parecido."
-                target="_blank"
-                class="btn btn-whatsapp-outline"
-              >
-                Quero esse
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modelo 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="model-card">
-            <div class="model-icon">
-              <i class="bi bi-tools"></i>
-            </div>
-
-            <h3>Prestador de Serviço</h3>
-
-            <p>
-              Ideal para eletricista, encanador, técnico, mecânico, pintor, assistência técnica e serviços locais.
-            </p>
-
-            <ul>
-              <li>Cards de serviços</li>
-              <li>Área atendida e orçamento</li>
-              <li>WhatsApp fixo e avaliações</li>
-            </ul>
-
-            <div class="model-buttons">
-              <a 
-                href="https://saulinhomarques.github.io/template3"
-                target="_blank" 
-                class="btn btn-model"
-              >
-                Ver demonstração
-              </a>
-
-              <a 
-                href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vi%20o%20modelo%20de%20prestador%20de%20serviço%20e%20quero%20um%20orçamento."
-                target="_blank"
-                class="btn btn-whatsapp-outline"
-              >
-                Quero esse
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+     </div>
     </div>
-  </section>
-
-  <!-- Pacotes -->
-  <section class="section-padding pricing-section" id="pacotes">
-    <div class="container">
-      <div class="section-title text-center">
-        <span class="section-tag">Pacotes</span>
-
-        <h2>
-          Escolha o plano ideal para começar
-        </h2>
-
-        <p>
-          Os valores são “a partir de”, porque cada cliente pode precisar de algo diferente. Aqui não é preço travado igual boleto chegando dia 5.
-        </p>
+   </section>
+   <section class="bg-surface py-24" id="servicos">
+    <div class="mx-auto max-w-6xl px-5">
+     <div class="mx-auto mb-12 max-w-3xl text-center">
+      <span class="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-extrabold text-primary">
+       Serviços
+      </span>
+      <h2 class="mt-4 text-[clamp(1.9rem,4vw,3rem)] font-black tracking-tight">
+       O que eu posso criar para o seu negócio?
+      </h2>
+      <p class="mt-4 text-lg text-muted-foreground">
+       Sites pensados para apresentar sua empresa, gerar confiança e facilitar o contato com seus clientes.
+      </p>
+     </div>
+     <div class="grid gap-6 md:grid-cols-3">
+      <div class="rounded-[var(--radius)] border border-border bg-card p-8 transition hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]">
+       <div class="mb-5 inline-flex rounded-2xl bg-primary/10 p-4 text-primary">
+        <svg aria-hidden="true" class="lucide lucide-layout-template size-7" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <rect height="7" rx="1" width="18" x="3" y="3">
+         </rect>
+         <rect height="7" rx="1" width="9" x="3" y="14">
+         </rect>
+         <rect height="7" rx="1" width="5" x="16" y="14">
+         </rect>
+        </svg>
+       </div>
+       <h3 class="text-xl font-black">
+        Site institucional
+       </h3>
+       <p class="mt-3 text-muted-foreground">
+        Uma página profissional para apresentar sua empresa, serviços, localização, redes sociais e contato.
+       </p>
       </div>
-
-      <div class="row g-4 align-items-stretch">
-        <!-- Básico -->
-        <div class="col-lg-4">
-          <div class="price-card">
-            <h3>Pacote Básico</h3>
-
-            <span class="price-subtitle">Site Página Única</span>
-
-            <div class="price">
-              <small>A partir de</small>
-              R$ 497
-            </div>
-
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Página única</li>
-              <li><i class="bi bi-check-circle"></i> Design responsivo</li>
-              <li><i class="bi bi-check-circle"></i> Botão de WhatsApp</li>
-              <li><i class="bi bi-check-circle"></i> Seção sobre</li>
-              <li><i class="bi bi-check-circle"></i> Produtos ou serviços</li>
-              <li><i class="bi bi-check-circle"></i> Localização</li>
-              <li><i class="bi bi-check-circle"></i> Redes sociais</li>
-              <li><i class="bi bi-check-circle"></i> SEO básico</li>
-              <li><i class="bi bi-check-circle"></i> Publicação online</li>
-            </ul>
-
-            <a 
-              href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Tenho%20interesse%20no%20Pacote%20Básico%20de%20site%20página%20única."
-              target="_blank"
-              class="btn btn-price"
-            >
-              Pedir orçamento
-            </a>
-          </div>
-        </div>
-
-        <!-- Profissional -->
-        <div class="col-lg-4">
-          <div class="price-card highlighted-price">
-            <span class="popular-badge">Mais indicado</span>
-
-            <h3>Pacote Profissional</h3>
-
-            <span class="price-subtitle">Site Vitrine</span>
-
-            <div class="price">
-              <small>A partir de</small>
-              R$ 897
-            </div>
-
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Até 5 seções ou páginas</li>
-              <li><i class="bi bi-check-circle"></i> Galeria</li>
-              <li><i class="bi bi-check-circle"></i> Depoimentos</li>
-              <li><i class="bi bi-check-circle"></i> Produtos ou serviços</li>
-              <li><i class="bi bi-check-circle"></i> WhatsApp fixo</li>
-              <li><i class="bi bi-check-circle"></i> Google Maps</li>
-              <li><i class="bi bi-check-circle"></i> SEO básico</li>
-              <li><i class="bi bi-check-circle"></i> Open Graph para WhatsApp</li>
-              <li><i class="bi bi-check-circle"></i> Publicação online</li>
-              <li><i class="bi bi-check-circle"></i> Suporte inicial</li>
-            </ul>
-
-            <a 
-              href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Tenho%20interesse%20no%20Pacote%20Profissional%20Site%20Vitrine."
-              target="_blank"
-              class="btn btn-price btn-price-highlight"
-            >
-              Quero esse pacote
-            </a>
-          </div>
-        </div>
-
-        <!-- Premium -->
-        <div class="col-lg-4">
-          <div class="price-card">
-            <h3>Pacote Premium</h3>
-
-            <span class="price-subtitle">Site + Estratégia</span>
-
-            <div class="price">
-              <small>A partir de</small>
-              R$ 1.497
-            </div>
-
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Site completo</li>
-              <li><i class="bi bi-check-circle"></i> Textos persuasivos</li>
-              <li><i class="bi bi-check-circle"></i> Mais páginas</li>
-              <li><i class="bi bi-check-circle"></i> Formulário</li>
-              <li><i class="bi bi-check-circle"></i> Integração com e-mail</li>
-              <li><i class="bi bi-check-circle"></i> Google Analytics</li>
-              <li><i class="bi bi-check-circle"></i> Google Search Console</li>
-              <li><i class="bi bi-check-circle"></i> Otimização extra</li>
-              <li><i class="bi bi-check-circle"></i> Suporte estendido</li>
-            </ul>
-
-            <a 
-              href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Tenho%20interesse%20no%20Pacote%20Premium%20Site%20mais%20Estratégia."
-              target="_blank"
-              class="btn btn-price"
-            >
-              Pedir orçamento
-            </a>
-          </div>
-        </div>
+      <div class="rounded-[var(--radius)] border border-border bg-card p-8 transition hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]">
+       <div class="mb-5 inline-flex rounded-2xl bg-primary/10 p-4 text-primary">
+        <svg aria-hidden="true" class="lucide lucide-baggage-claim size-7" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M22 18H6a2 2 0 0 1-2-2V7a2 2 0 0 0-2-2">
+         </path>
+         <path d="M17 14V4a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v10">
+         </path>
+         <rect height="8" rx="1" width="13" x="8" y="6">
+         </rect>
+         <circle cx="18" cy="20" r="2">
+         </circle>
+         <circle cx="9" cy="20" r="2">
+         </circle>
+        </svg>
+       </div>
+       <h3 class="text-xl font-black">
+        Site vitrine
+       </h3>
+       <p class="mt-3 text-muted-foreground">
+        Ideal para mostrar produtos, coleções, serviços, fotos, preços e direcionar o cliente para o WhatsApp.
+       </p>
       </div>
+      <div class="rounded-[var(--radius)] border border-border bg-card p-8 transition hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]">
+       <div class="mb-5 inline-flex rounded-2xl bg-primary/10 p-4 text-primary">
+        <svg aria-hidden="true" class="lucide lucide-rocket size-7" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5">
+         </path>
+         <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09">
+         </path>
+         <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z">
+         </path>
+         <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05">
+         </path>
+        </svg>
+       </div>
+       <h3 class="text-xl font-black">
+        Landing page
+       </h3>
+       <p class="mt-3 text-muted-foreground">
+        Página focada em conversão, perfeita para campanhas, divulgação de serviços ou apresentação de oferta.
+       </p>
+      </div>
+     </div>
     </div>
-  </section>
-
-  <!-- Benefícios -->
-  <section class="section-padding benefits-section">
-    <div class="container">
-      <div class="section-title text-center">
-        <span class="section-tag">Benefícios</span>
-
-        <h2>
-          Por que ter um site profissional?
-        </h2>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="benefit-card">
-            <i class="bi bi-shield-check"></i>
-
-            <h3>Mais confiança</h3>
-
-            <p>
-              Um site bem feito passa mais credibilidade para quem conhece sua empresa pela primeira vez.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="benefit-card">
-            <i class="bi bi-whatsapp"></i>
-
-            <h3>Mais contatos</h3>
-
-            <p>
-              Botões estratégicos levam o cliente direto para o WhatsApp com mensagem pronta.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="benefit-card">
-            <i class="bi bi-phone"></i>
-
-            <h3>Funciona no celular</h3>
-
-            <p>
-              O site se adapta para celular, tablet e computador, sem ficar quebrado igual promessa de estudar segunda.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="benefit-card">
-            <i class="bi bi-graph-up-arrow"></i>
-
-            <h3>Presença online</h3>
-
-            <p>
-              Sua empresa ganha um endereço profissional para divulgar no Instagram, WhatsApp, cartão e Google.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Processo -->
-  <section class="section-padding process-section" id="processo">
-    <div class="container">
-      <div class="section-title text-center">
-        <span class="section-tag">Processo</span>
-
-        <h2>
-          Como funciona a criação do site?
-        </h2>
-
-        <p>
-          Processo simples, direto e sem enrolação nível tutorial de 40 minutos para ensinar abrir o navegador.
-        </p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="process-card">
-            <span>01</span>
-
-            <h3>Contato inicial</h3>
-
-            <p>
-              Você me chama no WhatsApp e explica o tipo de site que precisa.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="process-card">
-            <span>02</span>
-
-            <h3>Escolha do modelo</h3>
-
-            <p>
-              Escolhemos um modelo base ou definimos uma estrutura personalizada.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="process-card">
-            <span>03</span>
-
-            <h3>Criação do site</h3>
-
-            <p>
-              Eu desenvolvo o site com textos, seções, botões e visual adaptado ao negócio.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="process-card">
-            <span>04</span>
-
-            <h3>Publicação online</h3>
-
-            <p>
-              Depois da aprovação, o site é publicado e fica pronto para divulgação.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projetos Extras -->
-  <section class="section-padding projects-section">
-    <div class="container">
-      <div class="section-title text-center">
-        <span class="section-tag">Projetos</span>
-
-        <h2>
-          Outros projetos e experiências
-        </h2>
-
-        <p>
-          Além dos modelos comerciais, também desenvolvo projetos acadêmicos e sistemas web.
-        </p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <div class="project-card">
-            <div class="project-icon">
-              <i class="bi bi-sun"></i>
-            </div>
-
-            <div>
-              <h3>Sunseeker</h3>
-
-              <p>
-                Sistema de monitoramento e análise de geração de energia solar em tempo real, usando sensores, ESP32 e dashboard web.
-              </p>
-
-              <span>HTML • CSS • JavaScript • Firebase • ESP32</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="project-card">
-            <div class="project-icon">
-              <i class="bi bi-cpu"></i>
-            </div>
-
-            <div>
-              <h3>Projetos com Arduino</h3>
-
-              <p>
-                Projetos de robótica básica, automação e integração com sensores, incluindo carrinho controlado por Bluetooth.
-              </p>
-
-              <span>Arduino • Eletrônica • Sensores • Bluetooth</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section-padding faq-section" id="faq">
-    <div class="container">
-      <div class="section-title text-center">
-        <span class="section-tag">Perguntas frequentes</span>
-
-        <h2>
-          Dúvidas comuns antes de pedir um site
-        </h2>
-      </div>
-
-      <div class="accordion custom-accordion" id="faqAccordion">
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button 
-              class="accordion-button" 
-              type="button" 
-              data-bs-toggle="collapse" 
-              data-bs-target="#faq1"
-            >
-              O site funciona no celular?
-            </button>
-          </h3>
-
-          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              Sim. Todos os sites são responsivos, ou seja, se adaptam para celular, tablet e computador.
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button 
-              class="accordion-button collapsed" 
-              type="button" 
-              data-bs-toggle="collapse" 
-              data-bs-target="#faq2"
-            >
-              O site já vem com botão de WhatsApp?
-            </button>
-          </h3>
-
-          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              Sim. O site pode ter botões de WhatsApp em pontos estratégicos e também um botão fixo na tela.
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button 
-              class="accordion-button collapsed" 
-              type="button" 
-              data-bs-toggle="collapse" 
-              data-bs-target="#faq3"
-            >
-              Posso adaptar um dos modelos prontos?
-            </button>
-          </h3>
-
-          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              Sim. Os modelos servem como base para acelerar o processo, mas textos, cores, imagens e seções podem ser adaptados para o seu negócio.
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button 
-              class="accordion-button collapsed" 
-              type="button" 
-              data-bs-toggle="collapse" 
-              data-bs-target="#faq4"
-            >
-              Você publica o site online?
-            </button>
-          </h3>
-
-          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              Sim. A publicação online está inclusa nos pacotes. Também posso orientar sobre domínio, hospedagem e configuração inicial.
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button 
-              class="accordion-button collapsed" 
-              type="button" 
-              data-bs-toggle="collapse" 
-              data-bs-target="#faq5"
-            >
-              O valor pode mudar?
-            </button>
-          </h3>
-
-          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              Sim. Os valores são “a partir de” porque cada projeto pode ter necessidades diferentes, como mais páginas, formulário, integrações ou recursos extras.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Final -->
-  <section class="final-cta" id="contato">
-    <div class="container">
-      <div class="final-cta-box">
-        <h2>
-          Pronto para ter um site profissional para o seu negócio?
-        </h2>
-
-        <p>
-          Me chame no WhatsApp, veja os modelos disponíveis e peça um orçamento personalizado.
-        </p>
-
-        <a 
-          href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Quero%20criar%20um%20site%20profissional%20para%20meu%20negócio."
-          target="_blank"
-          class="btn btn-main"
-        >
-          <i class="bi bi-whatsapp"></i>
-          Falar com Saulo no WhatsApp
+   </section>
+   <section class="py-24" id="modelos">
+    <div class="mx-auto max-w-6xl px-5">
+     <div class="mx-auto mb-12 max-w-3xl text-center">
+      <span class="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-extrabold text-primary">
+       Modelos publicados
+      </span>
+      <h2 class="mt-4 text-[clamp(1.9rem,4vw,3rem)] font-black tracking-tight">
+       Veja modelos reais funcionando
+      </h2>
+      <p class="mt-4 text-lg text-muted-foreground">
+       Escolha um modelo pronto como base para o seu site.
+      </p>
+     </div>
+     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div class="relative flex flex-col rounded-[var(--radius)] border bg-card p-8 transition hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)] border-border">
+       <div class="mb-5 inline-flex w-fit rounded-2xl bg-primary/10 p-4 text-primary">
+        <svg aria-hidden="true" class="lucide lucide-baggage-claim size-7" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M22 18H6a2 2 0 0 1-2-2V7a2 2 0 0 0-2-2">
+         </path>
+         <path d="M17 14V4a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v10">
+         </path>
+         <rect height="8" rx="1" width="13" x="8" y="6">
+         </rect>
+         <circle cx="18" cy="20" r="2">
+         </circle>
+         <circle cx="9" cy="20" r="2">
+         </circle>
+        </svg>
+       </div>
+       <h3 class="text-xl font-black">
+        Loja Infantil / Roupas
+       </h3>
+       <p class="mt-3 text-muted-foreground">
+        Ideal para lojas de roupas, acessórios, enxoval, calçados, brechós e pequenos comércios.
+       </p>
+       <ul class="mt-5 space-y-2">
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-check mt-0.5 size-4 shrink-0 text-whatsapp" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 6 9 17l-5-5">
+          </path>
+         </svg>
+         Produtos em destaque
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-check mt-0.5 size-4 shrink-0 text-whatsapp" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 6 9 17l-5-5">
+          </path>
+         </svg>
+         Botão para pedido no WhatsApp
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-check mt-0.5 size-4 shrink-0 text-whatsapp" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 6 9 17l-5-5">
+          </path>
+         </svg>
+         Galeria, localização e redes sociais
+        </li>
+       </ul>
+       <div class="mt-7 flex flex-col gap-3">
+        <a class="inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 font-bold text-primary-foreground transition hover:brightness-110" href="https://saulinhomarques.github.io/template1" rel="noreferrer" target="_blank">
+         Ver demonstração
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-md-6">
-          <h3><span>Saulo</span>Marques</h3>
-
-          <p>
-            Desenvolvedor web focado em criação de sites profissionais para pequenos negócios.
-          </p>
-        </div>
-
-        <div class="col-md-6 text-md-end">
-          <p class="footer-contact">
-            <i class="bi bi-envelope"></i>
-            saulomqs975@gmail.com
-          </p>
-
-          <p class="footer-contact">
-            <i class="bi bi-whatsapp"></i>
-            +55 11 99727-4119
-          </p>
-
-          <p class="footer-contact">
-            <i class="bi bi-geo-alt"></i>
-            Francisco Morato - SP
-          </p>
-        </div>
-      </div>
-
-      <hr />
-
-      <div class="footer-bottom">
-        <p>
-          © 2026 Saulo da Silva Marques. Todos os direitos reservados.
-        </p>
-
-        <a href="#top" id="backToTop">
-          Voltar ao topo
+        <a class="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-bold text-whatsapp-foreground transition hover:brightness-95 bg-transparent !text-whatsapp border-2 border-whatsapp hover:bg-whatsapp/10" href="https://wa.me/5511997274119?text=Ol%C3%A1%2C%20Saulo!%20Vi%20o%20modelo%20de%20loja%20infantil%20e%20quero%20adaptar%20para%20meu%20neg%C3%B3cio." rel="noreferrer" target="_blank">
+         Quero esse
         </a>
+       </div>
       </div>
+      <div class="relative flex flex-col rounded-[var(--radius)] border bg-card p-8 transition hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)] border-primary shadow-[var(--shadow-elegant)]">
+       <span class="absolute -top-3 left-8 rounded-full bg-primary px-4 py-1 text-xs font-black uppercase tracking-wide text-primary-foreground">
+        Muito procurado
+       </span>
+       <div class="mb-5 inline-flex w-fit rounded-2xl bg-primary/10 p-4 text-primary">
+        <svg aria-hidden="true" class="lucide lucide-scissors size-7" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <circle cx="6" cy="6" r="3">
+         </circle>
+         <path d="M8.12 8.12 12 12">
+         </path>
+         <path d="M20 4 8.12 15.88">
+         </path>
+         <circle cx="6" cy="18" r="3">
+         </circle>
+         <path d="M14.8 14.8 20 20">
+         </path>
+        </svg>
+       </div>
+       <h3 class="text-xl font-black">
+        Barbearia / Salão
+       </h3>
+       <p class="mt-3 text-muted-foreground">
+        Ideal para barbearias, salões, estética, manicure, studios de tatuagem e beleza em geral.
+       </p>
+       <ul class="mt-5 space-y-2">
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-check mt-0.5 size-4 shrink-0 text-whatsapp" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 6 9 17l-5-5">
+          </path>
+         </svg>
+         Lista de serviços e preços
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-check mt-0.5 size-4 shrink-0 text-whatsapp" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 6 9 17l-5-5">
+          </path>
+         </svg>
+         Agendamento pelo WhatsApp
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-check mt-0.5 size-4 shrink-0 text-whatsapp" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 6 9 17l-5-5">
+          </path>
+         </svg>
+         Galeria, equipe e depoimentos
+        </li>
+       </ul>
+       <div class="mt-7 flex flex-col gap-3">
+        <a class="inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 font-bold text-primary-foreground transition hover:brightness-110" href="https://saulinhomarques.github.io/template2" rel="noreferrer" target="_blank">
+         Ver demonstração
+        </a>
+        <a class="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-bold text-whatsapp-foreground transition hover:brightness-95 bg-transparent !text-whatsapp border-2 border-whatsapp hover:bg-whatsapp/10" href="https://wa.me/5511997274119?text=Ol%C3%A1%2C%20Saulo!%20Vi%20o%20modelo%20de%20barbearia%20e%20quero%20um%20site%20parecido." rel="noreferrer" target="_blank">
+         Quero esse
+        </a>
+       </div>
+      </div>
+      <div class="relative flex flex-col rounded-[var(--radius)] border bg-card p-8 transition hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)] border-border">
+       <div class="mb-5 inline-flex w-fit rounded-2xl bg-primary/10 p-4 text-primary">
+        <svg aria-hidden="true" class="lucide lucide-wrench size-7" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z">
+         </path>
+        </svg>
+       </div>
+       <h3 class="text-xl font-black">
+        Prestador de Serviço
+       </h3>
+       <p class="mt-3 text-muted-foreground">
+        Ideal para eletricista, encanador, técnico, mecânico, pintor, assistência técnica e serviços locais.
+       </p>
+       <ul class="mt-5 space-y-2">
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-check mt-0.5 size-4 shrink-0 text-whatsapp" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 6 9 17l-5-5">
+          </path>
+         </svg>
+         Cards de serviços
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-check mt-0.5 size-4 shrink-0 text-whatsapp" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 6 9 17l-5-5">
+          </path>
+         </svg>
+         Área atendida e orçamento
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-check mt-0.5 size-4 shrink-0 text-whatsapp" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 6 9 17l-5-5">
+          </path>
+         </svg>
+         WhatsApp fixo e avaliações
+        </li>
+       </ul>
+       <div class="mt-7 flex flex-col gap-3">
+        <a class="inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 font-bold text-primary-foreground transition hover:brightness-110" href="https://saulinhomarques.github.io/template3" rel="noreferrer" target="_blank">
+         Ver demonstração
+        </a>
+        <a class="inline-flex items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-3 font-bold text-whatsapp-foreground transition hover:brightness-95 bg-transparent !text-whatsapp border-2 border-whatsapp hover:bg-whatsapp/10" href="https://wa.me/5511997274119?text=Ol%C3%A1%2C%20Saulo!%20Vi%20o%20modelo%20de%20prestador%20de%20servi%C3%A7o%20e%20quero%20um%20or%C3%A7amento." rel="noreferrer" target="_blank">
+         Quero esse
+        </a>
+       </div>
+      </div>
+     </div>
     </div>
-  </footer>
-
-  <!-- WhatsApp fixo -->
-  <a 
-    href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vi%20seu%20portfólio%20e%20quero%20um%20orçamento%20para%20um%20site."
-    target="_blank"
-    class="floating-whatsapp"
-    aria-label="Chamar no WhatsApp"
-  >
-    <i class="bi bi-whatsapp"></i>
-  </a>
-
-  <!-- Bootstrap JS -->
-  <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+   </section>
+   <section class="bg-surface py-24" id="pacotes">
+    <div class="mx-auto max-w-6xl px-5">
+     <div class="mx-auto mb-12 max-w-3xl text-center">
+      <span class="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-extrabold text-primary">
+       Pacotes
+      </span>
+      <h2 class="mt-4 text-[clamp(1.9rem,4vw,3rem)] font-black tracking-tight">
+       Escolha o plano ideal para começar
+      </h2>
+      <p class="mt-4 text-lg text-muted-foreground">
+       Os valores são “a partir de”, porque cada cliente pode precisar de algo diferente. Aqui não é preço travado igual boleto chegando dia 5.
+      </p>
+     </div>
+     <div class="grid items-stretch gap-6 lg:grid-cols-3">
+      <div class="relative flex flex-col rounded-[var(--radius)] border p-8 border-border bg-card">
+       <h3 class="text-xl font-black">
+        Pacote Básico
+       </h3>
+       <span class="text-sm font-semibold text-muted-foreground">
+        Site Página Única
+       </span>
+       <div class="mt-5">
+        <small class="block text-xs font-bold uppercase tracking-wide text-muted-foreground">
+         A partir de
+        </small>
+        <span class="text-4xl font-black">
+         R$ 497
+        </span>
+       </div>
+       <ul class="mt-6 flex-1 space-y-2.5">
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Página única
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Design responsivo
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Botão de WhatsApp
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Seção sobre
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Produtos ou serviços
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Localização
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Redes sociais
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         SEO básico
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Publicação online
+        </li>
+       </ul>
+       <a class="mt-8 inline-flex items-center justify-center rounded-full px-6 py-3.5 font-bold transition bg-primary text-primary-foreground hover:brightness-110" href="https://wa.me/5511997274119?text=Ol%C3%A1%2C%20Saulo!%20Tenho%20interesse%20no%20Pacote%20B%C3%A1sico%20de%20site%20p%C3%A1gina%20%C3%BAnica." rel="noreferrer" target="_blank">
+        Pedir orçamento
+       </a>
+      </div>
+      <div class="relative flex flex-col rounded-[var(--radius)] border p-8 border-transparent bg-[image:var(--gradient-primary)] text-primary-foreground shadow-[var(--shadow-elegant)] lg:-mt-4">
+       <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-card px-4 py-1 text-xs font-black uppercase tracking-wide text-primary">
+        Mais indicado
+       </span>
+       <h3 class="text-xl font-black">
+        Pacote Profissional
+       </h3>
+       <span class="text-sm font-semibold text-primary-foreground/80">
+        Site Vitrine
+       </span>
+       <div class="mt-5">
+        <small class="block text-xs font-bold uppercase tracking-wide text-primary-foreground/70">
+         A partir de
+        </small>
+        <span class="text-4xl font-black">
+         R$ 897
+        </span>
+       </div>
+       <ul class="mt-6 flex-1 space-y-2.5">
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary-foreground" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Até 5 seções ou páginas
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary-foreground" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Galeria
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary-foreground" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Depoimentos
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary-foreground" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Produtos ou serviços
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary-foreground" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         WhatsApp fixo
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary-foreground" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Google Maps
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary-foreground" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         SEO básico
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary-foreground" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Open Graph para WhatsApp
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary-foreground" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Publicação online
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary-foreground" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Suporte inicial
+        </li>
+       </ul>
+       <a class="mt-8 inline-flex items-center justify-center rounded-full px-6 py-3.5 font-bold transition bg-card text-primary hover:brightness-95" href="https://wa.me/5511997274119?text=Ol%C3%A1%2C%20Saulo!%20Tenho%20interesse%20no%20Pacote%20Profissional%20Site%20Vitrine." rel="noreferrer" target="_blank">
+        Quero esse pacote
+       </a>
+      </div>
+      <div class="relative flex flex-col rounded-[var(--radius)] border p-8 border-border bg-card">
+       <h3 class="text-xl font-black">
+        Pacote Premium
+       </h3>
+       <span class="text-sm font-semibold text-muted-foreground">
+        Site + Estratégia
+       </span>
+       <div class="mt-5">
+        <small class="block text-xs font-bold uppercase tracking-wide text-muted-foreground">
+         A partir de
+        </small>
+        <span class="text-4xl font-black">
+         R$ 1.497
+        </span>
+       </div>
+       <ul class="mt-6 flex-1 space-y-2.5">
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Site completo
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Textos persuasivos
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Mais páginas
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Formulário
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Integração com e-mail
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Google Analytics
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Google Search Console
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Otimização extra
+        </li>
+        <li class="flex items-start gap-2 text-sm font-medium">
+         <svg aria-hidden="true" class="lucide lucide-badge-check mt-0.5 size-4 shrink-0 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z">
+          </path>
+          <path d="m9 12 2 2 4-4">
+          </path>
+         </svg>
+         Suporte estendido
+        </li>
+       </ul>
+       <a class="mt-8 inline-flex items-center justify-center rounded-full px-6 py-3.5 font-bold transition bg-primary text-primary-foreground hover:brightness-110" href="https://wa.me/5511997274119?text=Ol%C3%A1%2C%20Saulo!%20Tenho%20interesse%20no%20Pacote%20Premium%20Site%20mais%20Estrat%C3%A9gia." rel="noreferrer" target="_blank">
+        Pedir orçamento
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="py-24">
+    <div class="mx-auto max-w-6xl px-5">
+     <div class="mx-auto mb-12 max-w-3xl text-center">
+      <span class="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-extrabold text-primary">
+       Benefícios
+      </span>
+      <h2 class="mt-4 text-[clamp(1.9rem,4vw,3rem)] font-black tracking-tight">
+       Por que ter um site profissional?
+      </h2>
+     </div>
+     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="rounded-[var(--radius)] border border-border bg-card p-7 transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
+       <svg aria-hidden="true" class="lucide lucide-shield size-8 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+        </path>
+       </svg>
+       <h3 class="mt-4 text-lg font-black">
+        Mais confiança
+       </h3>
+       <p class="mt-2 text-sm text-muted-foreground">
+        Um site bem feito passa mais credibilidade para quem conhece sua empresa pela primeira vez.
+       </p>
+      </div>
+      <div class="rounded-[var(--radius)] border border-border bg-card p-7 transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
+       <svg aria-hidden="true" class="lucide lucide-message-circle size-8 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719">
+        </path>
+       </svg>
+       <h3 class="mt-4 text-lg font-black">
+        Contato direto
+       </h3>
+       <p class="mt-2 text-sm text-muted-foreground">
+        Botões de WhatsApp em pontos estratégicos transformam visitantes em conversas de verdade.
+       </p>
+      </div>
+      <div class="rounded-[var(--radius)] border border-border bg-card p-7 transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
+       <svg aria-hidden="true" class="lucide lucide-monitor-smartphone size-8 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8">
+        </path>
+        <path d="M10 19v-3.96 3.15">
+        </path>
+        <path d="M7 19h5">
+        </path>
+        <rect height="10" rx="2" width="6" x="16" y="12">
+        </rect>
+       </svg>
+       <h3 class="mt-4 text-lg font-black">
+        Totalmente responsivo
+       </h3>
+       <p class="mt-2 text-sm text-muted-foreground">
+        O site se adapta para celular, tablet e computador, sem ficar quebrado igual promessa de estudar segunda.
+       </p>
+      </div>
+      <div class="rounded-[var(--radius)] border border-border bg-card p-7 transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]">
+       <svg aria-hidden="true" class="lucide lucide-trending-up size-8 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 7h6v6">
+        </path>
+        <path d="m22 7-8.5 8.5-5-5L2 17">
+        </path>
+       </svg>
+       <h3 class="mt-4 text-lg font-black">
+        Presença online
+       </h3>
+       <p class="mt-2 text-sm text-muted-foreground">
+        Sua empresa ganha um endereço profissional para divulgar no Instagram, WhatsApp, cartão e Google.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="bg-surface py-24" id="processo">
+    <div class="mx-auto max-w-6xl px-5">
+     <div class="mx-auto mb-12 max-w-3xl text-center">
+      <span class="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-extrabold text-primary">
+       Processo
+      </span>
+      <h2 class="mt-4 text-[clamp(1.9rem,4vw,3rem)] font-black tracking-tight">
+       Como funciona a criação do site?
+      </h2>
+      <p class="mt-4 text-lg text-muted-foreground">
+       Processo simples, direto e sem enrolação nível tutorial de 40 minutos para ensinar abrir o navegador.
+      </p>
+     </div>
+     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="rounded-[var(--radius)] border border-border bg-card p-7">
+       <span class="text-4xl font-black text-primary/25">
+        01
+       </span>
+       <h3 class="mt-3 text-lg font-black">
+        Contato inicial
+       </h3>
+       <p class="mt-2 text-sm text-muted-foreground">
+        Você me chama no WhatsApp e explica o tipo de site que precisa.
+       </p>
+      </div>
+      <div class="rounded-[var(--radius)] border border-border bg-card p-7">
+       <span class="text-4xl font-black text-primary/25">
+        02
+       </span>
+       <h3 class="mt-3 text-lg font-black">
+        Escolha do modelo
+       </h3>
+       <p class="mt-2 text-sm text-muted-foreground">
+        Escolhemos um modelo base ou definimos uma estrutura personalizada.
+       </p>
+      </div>
+      <div class="rounded-[var(--radius)] border border-border bg-card p-7">
+       <span class="text-4xl font-black text-primary/25">
+        03
+       </span>
+       <h3 class="mt-3 text-lg font-black">
+        Criação do site
+       </h3>
+       <p class="mt-2 text-sm text-muted-foreground">
+        Eu desenvolvo o site com textos, seções, botões e visual adaptado ao negócio.
+       </p>
+      </div>
+      <div class="rounded-[var(--radius)] border border-border bg-card p-7">
+       <span class="text-4xl font-black text-primary/25">
+        04
+       </span>
+       <h3 class="mt-3 text-lg font-black">
+        Publicação online
+       </h3>
+       <p class="mt-2 text-sm text-muted-foreground">
+        Depois da aprovação, o site é publicado e fica pronto para divulgação.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="py-24">
+    <div class="mx-auto max-w-6xl px-5">
+     <div class="mx-auto mb-12 max-w-3xl text-center">
+      <span class="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-extrabold text-primary">
+       Projetos
+      </span>
+      <h2 class="mt-4 text-[clamp(1.9rem,4vw,3rem)] font-black tracking-tight">
+       Outros projetos e experiências
+      </h2>
+      <p class="mt-4 text-lg text-muted-foreground">
+       Além dos modelos comerciais, também desenvolvo projetos acadêmicos e sistemas web.
+      </p>
+     </div>
+     <div class="grid gap-6 lg:grid-cols-2">
+      <div class="flex gap-5 rounded-[var(--radius)] border border-border bg-card p-8">
+       <div class="inline-flex h-fit rounded-2xl bg-primary/10 p-4 text-primary">
+        <svg aria-hidden="true" class="lucide lucide-sun size-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <circle cx="12" cy="12" r="4">
+         </circle>
+         <path d="M12 2v2">
+         </path>
+         <path d="M12 20v2">
+         </path>
+         <path d="m4.93 4.93 1.41 1.41">
+         </path>
+         <path d="m17.66 17.66 1.41 1.41">
+         </path>
+         <path d="M2 12h2">
+         </path>
+         <path d="M20 12h2">
+         </path>
+         <path d="m6.34 17.66-1.41 1.41">
+         </path>
+         <path d="m19.07 4.93-1.41 1.41">
+         </path>
+        </svg>
+       </div>
+       <div>
+        <h3 class="text-xl font-black">
+         Sunseeker
+        </h3>
+        <p class="mt-2 text-muted-foreground">
+         Sistema de monitoramento e análise de geração de energia solar em tempo real, usando sensores, ESP32 e dashboard web.
+        </p>
+        <span class="mt-3 block font-mono text-xs font-semibold text-primary">
+         HTML • CSS • JavaScript • Firebase • ESP32
+        </span>
+       </div>
+      </div>
+      <div class="flex gap-5 rounded-[var(--radius)] border border-border bg-card p-8">
+       <div class="inline-flex h-fit rounded-2xl bg-primary/10 p-4 text-primary">
+        <svg aria-hidden="true" class="lucide lucide-cpu size-6" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M12 20v2">
+         </path>
+         <path d="M12 2v2">
+         </path>
+         <path d="M17 20v2">
+         </path>
+         <path d="M17 2v2">
+         </path>
+         <path d="M2 12h2">
+         </path>
+         <path d="M2 17h2">
+         </path>
+         <path d="M2 7h2">
+         </path>
+         <path d="M20 12h2">
+         </path>
+         <path d="M20 17h2">
+         </path>
+         <path d="M20 7h2">
+         </path>
+         <path d="M7 20v2">
+         </path>
+         <path d="M7 2v2">
+         </path>
+         <rect height="16" rx="2" width="16" x="4" y="4">
+         </rect>
+         <rect height="8" rx="1" width="8" x="8" y="8">
+         </rect>
+        </svg>
+       </div>
+       <div>
+        <h3 class="text-xl font-black">
+         Projetos com Arduino
+        </h3>
+        <p class="mt-2 text-muted-foreground">
+         Projetos de robótica básica, automação e integração com sensores, incluindo carrinho controlado por Bluetooth.
+        </p>
+        <span class="mt-3 block font-mono text-xs font-semibold text-primary">
+         Arduino • Eletrônica • Sensores • Bluetooth
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="bg-surface py-24" id="faq">
+    <div class="mx-auto max-w-3xl px-5">
+     <div class="mb-12 text-center">
+      <span class="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-extrabold text-primary">
+       Perguntas frequentes
+      </span>
+      <h2 class="mt-4 text-[clamp(1.9rem,4vw,3rem)] font-black tracking-tight">
+       Dúvidas comuns antes de pedir um site
+      </h2>
+     </div>
+     <div class="space-y-3">
+      <div class="overflow-hidden rounded-3xl border border-border bg-card" data-faq="">
+       <button aria-expanded="true" class="flex w-full items-center justify-between gap-4 p-6 text-left text-lg font-bold" type="button">
+        O site funciona no celular?
+        <svg aria-hidden="true" class="lucide lucide-chevron-down size-5 shrink-0 text-primary transition-transform rotate-180" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="m6 9 6 6 6-6">
+         </path>
+        </svg>
+       </button>
+       <p class="px-6 pb-6 text-muted-foreground" data-faq-answer="">
+        Sim. Todos os sites são responsivos, ou seja, se adaptam para celular, tablet e computador.
+       </p>
+      </div>
+      <div class="overflow-hidden rounded-3xl border border-border bg-card" data-faq="">
+       <button aria-expanded="false" class="flex w-full items-center justify-between gap-4 p-6 text-left text-lg font-bold" type="button">
+        O site já vem com botão de WhatsApp?
+        <svg aria-hidden="true" class="lucide lucide-chevron-down size-5 shrink-0 text-primary transition-transform" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="m6 9 6 6 6-6">
+         </path>
+        </svg>
+       </button>
+       <p class="px-6 pb-6 text-muted-foreground" data-faq-answer="" hidden="">
+        Sim. O site pode ter botões de WhatsApp em pontos estratégicos e também um botão fixo na tela.
+       </p>
+      </div>
+      <div class="overflow-hidden rounded-3xl border border-border bg-card" data-faq="">
+       <button aria-expanded="false" class="flex w-full items-center justify-between gap-4 p-6 text-left text-lg font-bold" type="button">
+        Posso adaptar um dos modelos prontos?
+        <svg aria-hidden="true" class="lucide lucide-chevron-down size-5 shrink-0 text-primary transition-transform" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="m6 9 6 6 6-6">
+         </path>
+        </svg>
+       </button>
+       <p class="px-6 pb-6 text-muted-foreground" data-faq-answer="" hidden="">
+        Sim. Os modelos servem como base para acelerar o processo, mas textos, cores, imagens e seções podem ser adaptados para o seu negócio.
+       </p>
+      </div>
+      <div class="overflow-hidden rounded-3xl border border-border bg-card" data-faq="">
+       <button aria-expanded="false" class="flex w-full items-center justify-between gap-4 p-6 text-left text-lg font-bold" type="button">
+        Você publica o site online?
+        <svg aria-hidden="true" class="lucide lucide-chevron-down size-5 shrink-0 text-primary transition-transform" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="m6 9 6 6 6-6">
+         </path>
+        </svg>
+       </button>
+       <p class="px-6 pb-6 text-muted-foreground" data-faq-answer="" hidden="">
+        Sim. A publicação online está inclusa nos pacotes. Também posso orientar sobre domínio, hospedagem e configuração inicial.
+       </p>
+      </div>
+      <div class="overflow-hidden rounded-3xl border border-border bg-card" data-faq="">
+       <button aria-expanded="false" class="flex w-full items-center justify-between gap-4 p-6 text-left text-lg font-bold" type="button">
+        O valor pode mudar?
+        <svg aria-hidden="true" class="lucide lucide-chevron-down size-5 shrink-0 text-primary transition-transform" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="m6 9 6 6 6-6">
+         </path>
+        </svg>
+       </button>
+       <p class="px-6 pb-6 text-muted-foreground" data-faq-answer="" hidden="">
+        Sim. Os valores são “a partir de” porque cada projeto pode ter necessidades diferentes, como mais páginas, formulário, integrações ou recursos extras.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="px-5 py-24" id="contato">
+    <div class="mx-auto max-w-5xl rounded-[calc(var(--radius)+8px)] bg-[image:var(--gradient-primary)] p-12 text-center text-primary-foreground shadow-[var(--shadow-elegant)]">
+     <svg aria-hidden="true" class="lucide lucide-zap mx-auto size-10" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z">
+      </path>
+     </svg>
+     <h2 class="mt-5 text-[clamp(1.8rem,4vw,2.8rem)] font-black tracking-tight">
+      Pronto para ter um site profissional para o seu negócio?
+     </h2>
+     <p class="mx-auto mt-4 max-w-2xl text-lg text-primary-foreground/85">
+      Me chame no WhatsApp, veja os modelos disponíveis e peça um orçamento personalizado.
+     </p>
+     <a class="mt-8 inline-flex items-center gap-2 rounded-full bg-card px-8 py-4 font-black text-primary transition hover:brightness-95" href="https://wa.me/5511997274119?text=Ol%C3%A1%2C%20Saulo!%20Quero%20criar%20um%20site%20profissional%20para%20meu%20neg%C3%B3cio." rel="noreferrer" target="_blank">
+      <svg aria-hidden="true" class="lucide lucide-message-circle size-5" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+       <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719">
+       </path>
+      </svg>
+      Falar com Saulo no WhatsApp
+     </a>
+    </div>
+   </section>
+   <footer class="border-t border-border bg-card py-14">
+    <div class="mx-auto max-w-6xl px-5">
+     <div class="grid gap-8 md:grid-cols-2">
+      <div>
+       <h3 class="text-xl font-black">
+        <span class="text-primary">
+         Saulo
+        </span>
+        Marques
+       </h3>
+       <p class="mt-2 max-w-sm text-muted-foreground">
+        Desenvolvedor web focado em criação de sites profissionais para pequenos negócios.
+       </p>
+      </div>
+      <div class="space-y-2 md:text-right">
+       <p class="flex items-center gap-2 font-medium md:justify-end">
+        <svg aria-hidden="true" class="lucide lucide-mail size-4 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7">
+         </path>
+         <rect height="16" rx="2" width="20" x="2" y="4">
+         </rect>
+        </svg>
+        saulomqs975@gmail.com
+       </p>
+       <p class="flex items-center gap-2 font-medium md:justify-end">
+        <svg aria-hidden="true" class="lucide lucide-phone size-4 text-whatsapp" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+         </path>
+        </svg>
+        +55 11 99727-4119
+       </p>
+       <p class="flex items-center gap-2 font-medium md:justify-end">
+        <svg aria-hidden="true" class="lucide lucide-map-pin size-4 text-primary" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+         <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+         </path>
+         <circle cx="12" cy="10" r="3">
+         </circle>
+        </svg>
+        Francisco Morato - SP
+       </p>
+      </div>
+     </div>
+     <hr class="my-8 border-border"/>
+     <div class="flex flex-col items-center justify-between gap-3 text-sm text-muted-foreground sm:flex-row">
+      <p>
+       © 2026 Saulo da Silva Marques. Todos os direitos reservados.
+      </p>
+      <a class="flex items-center gap-1 font-bold text-primary" href="#top">
+       <svg aria-hidden="true" class="lucide lucide-arrow-up size-4" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="m5 12 7-7 7 7">
+        </path>
+        <path d="M12 19V5">
+        </path>
+       </svg>
+       Voltar ao topo
+      </a>
+     </div>
+    </div>
+   </footer>
+   <a aria-label="Chamar no WhatsApp" class="fixed bottom-6 right-6 z-50 inline-flex size-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-[var(--shadow-elegant)] transition hover:scale-105" href="https://wa.me/5511997274119?text=Ol%C3%A1%2C%20Saulo!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20um%20or%C3%A7amento%20para%20um%20site." rel="noreferrer" target="_blank">
+    <svg aria-hidden="true" class="lucide lucide-message-circle size-7" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+     <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719">
+     </path>
+    </svg>
+   </a>
+  </div>
+  <!--/$-->
+  <script defer="" src="script.js">
   </script>
-
-  <!-- JS -->
-  <script src="script.js"></script>
-</body>
+ </body>
 </html>
