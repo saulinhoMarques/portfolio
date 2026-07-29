@@ -1,96 +1,53 @@
-// Fechar menu mobile ao clicar em um link
-const navLinks = document.querySelectorAll(".nav-link");
-const navbarCollapse = document.querySelector(".navbar-collapse");
+// Navbar: compacta ao rolar
+const navbar = document.getElementById('navbar');
+const onScroll = () => {
+  if (!navbar) return;
+  const compact = window.scrollY > 40;
+  navbar.classList.toggle('py-2', compact);
+  navbar.classList.toggle('shadow-[var(--shadow-soft)]', compact);
+  navbar.classList.toggle('py-4', !compact);
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    if (navbarCollapse.classList.contains("show")) {
-      const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-      bsCollapse.hide();
+// Menu mobile
+const toggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('mobile-menu');
+if (toggle && menu) {
+  toggle.addEventListener('click', () => { menu.hidden = !menu.hidden; });
+  menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => { menu.hidden = true; }));
+}
+
+// FAQ acordeão
+document.querySelectorAll('[data-faq]').forEach((item) => {
+  const btn = item.querySelector('button');
+  const answer = item.querySelector('[data-faq-answer]');
+  const icon = item.querySelector('svg');
+  if (!btn || !answer) return;
+  btn.addEventListener('click', () => {
+    const willOpen = answer.hidden;
+    document.querySelectorAll('[data-faq]').forEach((other) => {
+      const a = other.querySelector('[data-faq-answer]');
+      const b = other.querySelector('button');
+      const i = other.querySelector('svg');
+      if (a) a.hidden = true;
+      if (b) b.setAttribute('aria-expanded', 'false');
+      if (i) i.classList.remove('rotate-180');
+    });
+    if (willOpen) {
+      answer.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+      if (icon) icon.classList.add('rotate-180');
     }
   });
 });
 
-// Animação ao rolar a página
-const animatedElements = document.querySelectorAll(
-  ".service-card, .model-card, .price-card, .benefit-card, .process-card, .project-card, .section-title, .about-list div"
-);
-
-animatedElements.forEach((element) => {
-  element.classList.add("fade-in");
-});
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  },
-  {
-    threshold: 0.15,
-  }
-);
-
-animatedElements.forEach((element) => {
-  observer.observe(element);
-});
-
-// Mudar navbar ao rolar
-const navbar = document.querySelector(".custom-navbar");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 80) {
-    navbar.classList.add("navbar-scrolled");
-  } else {
-    navbar.classList.remove("navbar-scrolled");
-  }
-});
-
-// Voltar ao topo
-const backToTop = document.querySelector("#backToTop");
-
-if (backToTop) {
-  backToTop.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+// Rolagem suave nas âncoras
+document.querySelectorAll('a[href^="#"]').forEach((a) => {
+  a.addEventListener('click', (e) => {
+    const el = document.querySelector(a.getAttribute('href'));
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
-}
-
-
-// Gerenciar tema claro/escuro
-const themeToggle = document.querySelector(".theme-toggle");
-
-// Carregar tema salvo no localStorage
-const savedTheme = localStorage.getItem("theme") || "light";
-if (savedTheme === "dark") {
-  document.body.classList.add("dark-theme");
-  if (themeToggle) {
-    themeToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
-  }
-} else {
-  if (themeToggle) {
-    themeToggle.innerHTML = '<i class="bi bi-moon-fill"></i>';
-  }
-}
-
-// Alternar tema ao clicar no botão
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-theme");
-    
-    // Atualizar ícone
-    const isDark = document.body.classList.contains("dark-theme");
-    themeToggle.innerHTML = isDark 
-      ? '<i class="bi bi-sun-fill"></i>' 
-      : '<i class="bi bi-moon-fill"></i>';
-    
-    // Salvar preferência no localStorage
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  });
-}
+});
