@@ -1,96 +1,137 @@
-// Fechar menu mobile ao clicar em um link
-const navLinks = document.querySelectorAll(".nav-link");
-const navbarCollapse = document.querySelector(".navbar-collapse");
+/* ==========================================================================
+   Saulo Marques — interações da página
+   Módulos: tema, menu mobile, navbar, animações de entrada, voltar ao topo
+   ========================================================================== */
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    if (navbarCollapse.classList.contains("show")) {
-      const bsCollapse = new bootstrap.Collapse(navbarCollapse);
-      bsCollapse.hide();
-    }
-  });
-});
+(() => {
+  "use strict";
 
-// Animação ao rolar a página
-const animatedElements = document.querySelectorAll(
-  ".service-card, .model-card, .price-card, .benefit-card, .process-card, .project-card, .section-title, .about-list div"
-);
+  const THEME_KEY = "theme";
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
 
-animatedElements.forEach((element) => {
-  element.classList.add("fade-in");
-});
+  /* Tema claro/escuro ----------------------------------------------------- */
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
+  function setupTheme() {
+    const toggle = document.querySelector(".theme-toggle");
+    if (!toggle) return;
+
+    const icon = toggle.querySelector("i");
+
+    const render = (isDark) => {
+      if (icon) icon.className = isDark ? "bi bi-sun-fill" : "bi bi-moon-fill";
+      toggle.setAttribute("aria-pressed", String(isDark));
+      toggle.setAttribute(
+        "title",
+        isDark ? "Ativar tema claro" : "Ativar tema escuro"
+      );
+    };
+
+    render(document.body.classList.contains("dark-theme"));
+
+    toggle.addEventListener("click", () => {
+      const isDark = document.body.classList.toggle("dark-theme");
+      render(isDark);
+      try {
+        localStorage.setItem(THEME_KEY, isDark ? "dark" : "light");
+      } catch (error) {
+        /* localStorage indisponível (modo privado): ignora */
       }
     });
-  },
-  {
-    threshold: 0.15,
   }
-);
 
-animatedElements.forEach((element) => {
-  observer.observe(element);
-});
+  /* Menu mobile ----------------------------------------------------------- */
 
-// Mudar navbar ao rolar
-const navbar = document.querySelector(".custom-navbar");
+  function setupMobileMenu() {
+    const collapse = document.querySelector(".navbar-collapse");
+    if (!collapse || typeof bootstrap === "undefined") return;
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 80) {
-    navbar.classList.add("navbar-scrolled");
-  } else {
-    navbar.classList.remove("navbar-scrolled");
-  }
-});
-
-// Voltar ao topo
-const backToTop = document.querySelector("#backToTop");
-
-if (backToTop) {
-  backToTop.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+    collapse.querySelectorAll(".nav-link, .btn-whatsapp").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (collapse.classList.contains("show")) {
+          bootstrap.Collapse.getOrCreateInstance(collapse).hide();
+        }
+      });
     });
-  });
-}
-
-
-// Gerenciar tema claro/escuro
-const themeToggle = document.querySelector(".theme-toggle");
-
-// Carregar tema salvo no localStorage
-const savedTheme = localStorage.getItem("theme") || "light";
-if (savedTheme === "dark") {
-  document.body.classList.add("dark-theme");
-  if (themeToggle) {
-    themeToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
   }
-} else {
-  if (themeToggle) {
-    themeToggle.innerHTML = '<i class="bi bi-moon-fill"></i>';
-  }
-}
 
-// Alternar tema ao clicar no botão
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-theme");
-    
-    // Atualizar ícone
-    const isDark = document.body.classList.contains("dark-theme");
-    themeToggle.innerHTML = isDark 
-      ? '<i class="bi bi-sun-fill"></i>' 
-      : '<i class="bi bi-moon-fill"></i>';
-    
-    // Salvar preferência no localStorage
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  });
-}
+  /* Navbar compacta ao rolar ---------------------------------------------- */
+
+  function setupNavbarScroll() {
+    const navbar = document.querySelector(".custom-navbar");
+    if (!navbar) return;
+
+    let ticking = false;
+
+    const update = () => {
+      navbar.classList.toggle("navbar-scrolled", window.scrollY > 80);
+      ticking = false;
+    };
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(update);
+      },
+      { passive: true }
+    );
+
+    update();
+  }
+
+  /* Animações de entrada --------------------------------------------------- */
+
+  function setupRevealAnimations() {
+    const elements = document.querySelectorAll(
+      ".service-card, .model-card, .price-card, .benefit-card, .process-card, .project-card, .section-title, .about-list li"
+    );
+    if (!elements.length) return;
+
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      elements.forEach((el) => el.classList.add("fade-in", "show"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("show");
+          obs.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    elements.forEach((el) => {
+      el.classList.add("fade-in");
+      observer.observe(el);
+    });
+  }
+
+  /* Voltar ao topo --------------------------------------------------------- */
+
+  function setupBackToTop() {
+    const backToTop = document.querySelector("#backToTop");
+    if (!backToTop) return;
+
+    backToTop.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+      });
+    });
+  }
+
+  /* Inicialização ---------------------------------------------------------- */
+
+  setupTheme();
+  setupMobileMenu();
+  setupNavbarScroll();
+  setupRevealAnimations();
+  setupBackToTop();
+})();
