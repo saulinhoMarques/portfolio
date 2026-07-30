@@ -86,42 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 6. Calculadora de ROI / Retorno de Investimento
-  const nicheSelect = document.getElementById("nicheSelect");
-  const ticketInput = document.getElementById("ticketInput");
-  const clientsNeededEl = document.getElementById("clientsNeeded");
-  const roiDetailText = document.getElementById("roiDetailText");
-
-  const PLAN_PRICE = 797; // Valor do Plano Profissional como referência
-
-  function calculateROI() {
-    let ticket = parseFloat(ticketInput.value) || 50;
-    if (ticket <= 0) ticket = 50;
-
-    const clientsCount = Math.ceil(PLAN_PRICE / ticket);
-    clientsNeededEl.textContent = clientsCount;
-
-    if (clientsCount === 1) {
-      roiDetailText.textContent = `Apenas 1 único cliente ou venda paga 100% do seu investimento no site! Todo o resto é lucro puro.`;
-    } else {
-      roiDetailText.textContent = `Após ${clientsCount} vendas de R$ ${ticket.toFixed(2).replace('.', ',')}, todo o lucro gerado pela sua Landing Page é 100% seu!`;
-    }
-  }
-
-  if (nicheSelect && ticketInput) {
-    nicheSelect.addEventListener("change", (e) => {
-      ticketInput.value = e.target.value;
-      calculateROI();
-    });
-
-    ticketInput.addEventListener("input", () => {
-      calculateROI();
-    });
-
-    // Calcular na inicialização
-    calculateROI();
-  }
-
   // 7. Toggle de Preço (À Vista vs Parcelado)
   const pricingToggle = document.getElementById("pricingToggle");
   const labelCash = document.getElementById("labelCash");
