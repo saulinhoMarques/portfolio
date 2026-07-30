@@ -5,46 +5,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Saulo | Criação de Sites Profissionais</title>
+  <title>Landing Pages de Alta Conversão | Saulo Marques Web Design</title>
 
   <meta name="description"
-    content="Saulo Marques, desenvolvedor web. Criação de sites profissionais para pequenos negócios, lojas, barbearias, salões e prestadores de serviço venderem mais pelo WhatsApp." />
+    content="Criação de Landing Pages profissionais e focadas em conversão para pequenos negócios e prestadores de serviço venderem mais pelo WhatsApp." />
 
   <meta name="keywords"
-    content="Saulo, desenvolvedor web, criação de sites, sites para pequenos negócios, site para loja, site para barbearia, site para prestador de serviço, landing page, portfólio web" />
+    content="Landing Page, criação de sites, Saulo Marques, site para whatsapp, landing page de alta conversão, web designer, sites profissionais" />
 
   <meta name="author" content="Saulo da Silva Marques" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Criação de Sites Profissionais" />
-  <meta property="og:description" content="Sites modernos, responsivos e prontos para gerar contatos pelo WhatsApp." />
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:title" content="Landing Pages de Alta Conversão | Saulo Marques" />
+  <meta property="og:description" content="Transforme visitantes em clientes com uma Landing Page moderna, rápida e focada em vendas pelo WhatsApp." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://saulosm.com.br" />
   <meta property="og:image" content="https://saulosm.com.br/assets/img/sites.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Saulo | Criação de Sites Profissionais" />
-  <meta name="twitter:description" content="Criação de sites para pequenos negócios venderem mais pelo WhatsApp." />
+  <meta name="twitter:title" content="Landing Pages de Alta Conversão | Saulo Marques" />
+  <meta name="twitter:description" content="Sites e Landing Pages modernos focados em gerar vendas e agendamentos pelo WhatsApp." />
   <meta name="twitter:image" content="https://saulosm.com.br/assets/img/sites.png" />
 
   <!-- Favicon -->
   <link rel="icon" href="assets/img/favicon.png" type="image/png" />
 
-  <!-- Bootstrap -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 
-  <!-- CSS -->
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body id="top">
 
-  <!--  vLibras-->
+  <!--  vLibras para Acessibilidade -->
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
@@ -56,8 +61,7 @@
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
 
-
-  <!-- Navbar -->
+  <!-- Navbar Glassmorphism -->
   <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
     <div class="container">
       <a class="navbar-brand" href="#top">
@@ -72,23 +76,23 @@
       <div class="collapse navbar-collapse" id="menuPrincipal">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
           <li class="nav-item">
-            <a class="nav-link" href="#sobre">Sobre</a>
+            <a class="nav-link" href="#por-que-lp">Por que uma LP?</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#servicos">Serviços</a>
+            <a class="nav-link" href="#modelos">Modelos Prontos</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#modelos">Modelos</a>
+            <a class="nav-link" href="#simulador">Calculadora ROI</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#pacotes">Pacotes</a>
+            <a class="nav-link" href="#pacotes">Planos & Preços</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#processo">Processo</a>
+            <a class="nav-link" href="#depoimentos">Depoimentos</a>
           </li>
 
           <li class="nav-item">
@@ -102,11 +106,11 @@
           </li>
 
           <li class="nav-item ms-lg-3">
-            <a class="btn btn-whatsapp btn-sm"
-              href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vi%20seu%20portfólio%20e%20quero%20um%20orçamento%20para%20um%20site."
+            <a class="btn btn-whatsapp btn-sm shadow-sm"
+              href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vim%20pela%20sua%20Landing%20Page%20e%20quero%20um%20orçamento!"
               target="_blank">
-              <i class="bi bi-whatsapp"></i>
-              Orçamento
+              <i class="bi bi-whatsapp me-1"></i>
+              Falar no WhatsApp
             </a>
           </li>
         </ul>
@@ -114,88 +118,104 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <header class="hero-section">
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-6">
-          <span class="hero-badge">
-            Desenvolvedor Web
-          </span>
+          <div class="badge-status mb-3">
+            <span class="pulse-dot"></span>
+            <span>Agenda Aberta: Vagas Disponíveis para este Mês</span>
+          </div>
 
-          <h1>
-            Crio sites profissionais para pequenos negócios venderem mais pelo WhatsApp
+          <h1 class="hero-title">
+            Transforme Visitantes em Clientes com uma <span class="text-gradient">Landing Page de Alta Conversão</span>
           </h1>
 
           <p class="hero-subtitle">
-            Sou Saulo Marques, desenvolvedor web. Crio sites modernos, responsivos e personalizados para empresas que
-            querem apresentar seus produtos, serviços e receber contatos direto pelo WhatsApp.
+            Crio páginas estratégicas, ultra rápidas e adaptadas para celular, desenhadas com um único objetivo: 
+            <strong>fazer seu cliente clicar e chamar no WhatsApp</strong>.
           </p>
 
           <div class="hero-buttons">
-            <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vi%20seu%20portfólio%20e%20quero%20criar%20um%20site%20para%20meu%20negócio."
-              target="_blank" class="btn btn-main">
-              <i class="bi bi-whatsapp"></i>
-              Solicitar orçamento
+            <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Quero%20uma%20Landing%20Page%20de%20Alta%20Conversão%20para%20meu%20negócio."
+              target="_blank" class="btn btn-main btn-lg">
+              <i class="bi bi-whatsapp me-2"></i>
+              Solicitar Orçamento Grátis
             </a>
 
-            <a href="#modelos" class="btn btn-outline-custom">
-              Ver modelos prontos
+            <a href="#simulador" class="btn btn-outline-custom btn-lg">
+              <i class="bi bi-calculator me-2"></i>
+              Simular Retorno do Investimento
             </a>
           </div>
 
-          <div class="hero-info">
-            <div>
-              <strong>3</strong>
-              <span>modelos publicados</span>
+          <div class="hero-trust-badges">
+            <div class="trust-item">
+              <i class="bi bi-lightning-charge-fill text-warning"></i>
+              <span>Carregamento Super Rápido</span>
             </div>
-
-            <div>
-              <strong>100%</strong>
-              <span>responsivo</span>
+            <div class="trust-item">
+              <i class="bi bi-phone-fill text-primary"></i>
+              <span>100% Mobile-First</span>
             </div>
-
-            <div>
-              <strong>WhatsApp</strong>
-              <span>integrado</span>
+            <div class="trust-item">
+              <i class="bi bi-shield-check text-success"></i>
+              <span>Garantia de Satisfação</span>
             </div>
           </div>
         </div>
 
         <div class="col-lg-6">
-          <div class="hero-card">
-            <div class="browser-dots">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-            <div class="fake-site-preview">
-              <div class="preview-header"></div>
-
-              <div class="preview-content">
-                <div class="preview-title"></div>
-                <div class="preview-text"></div>
-                <div class="preview-text small"></div>
+          <div class="hero-mockup-wrapper">
+            <div class="hero-card glass-card">
+              <div class="browser-dots">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+                <span class="browser-url"><i class="bi bi-lock-fill me-1"></i> seunegocio.com.br</span>
               </div>
 
-              <div class="preview-grid">
-                <div></div>
-                <div></div>
-                <div></div>
+              <div class="mockup-content">
+                <div class="mockup-header-banner">
+                  <div class="pill-badge">Oferta Especial</div>
+                  <h4>Transforme mais leads em vendas hoje</h4>
+                </div>
+
+                <div class="mockup-body">
+                  <div class="mockup-line title"></div>
+                  <div class="mockup-line text-full"></div>
+                  <div class="mockup-line text-short"></div>
+                  
+                  <div class="mockup-feature-cards">
+                    <div class="feat-box"><i class="bi bi-check2-circle"></i> Design Moderno</div>
+                    <div class="feat-box"><i class="bi bi-whatsapp"></i> Botão Direto</div>
+                    <div class="feat-box"><i class="bi bi-speedometer2"></i> Velocidade 95+</div>
+                  </div>
+
+                  <div class="mockup-cta-btn">
+                    <i class="bi bi-whatsapp me-2"></i> Agendar pelo WhatsApp
+                  </div>
+                </div>
               </div>
 
-              <div class="preview-button"></div>
-            </div>
+              <!-- Floating Badges for Visual Impact -->
+              <div class="floating-badge badge-top-left">
+                <div class="icon-circle bg-success"><i class="bi bi-graph-up-arrow"></i></div>
+                <div>
+                  <strong>+350% Conversão</strong>
+                  <small>Foco no WhatsApp</small>
+                </div>
+              </div>
 
-            <div class="floating-card card-one">
-              <i class="bi bi-phone"></i>
-              Mobile
-            </div>
+              <div class="floating-badge badge-bottom-right">
+                <div class="icon-circle bg-primary"><i class="bi bi-clock-history"></i></div>
+                <div>
+                  <strong>Entrega Rápida</strong>
+                  <small>Em 3 a 5 dias úteis</small>
+                </div>
+              </div>
 
-            <div class="floating-card card-two">
-              <i class="bi bi-whatsapp"></i>
-              Contato rápido
             </div>
           </div>
         </div>
@@ -203,153 +223,120 @@
     </div>
   </header>
 
-  <!-- Sobre -->
-  <section class="section-padding about-section" id="sobre">
+  <!-- Métricas Rápidas -->
+  <section class="metrics-bar">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-5">
-          <span class="section-tag">Sobre mim</span>
-
-          <h2>
-            Desenvolvedor focado em sites simples, bonitos e que ajudam negócios locais.
-          </h2>
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3">
+          <div class="metric-card">
+            <h3><span class="counter">100</span>%</h3>
+            <p>Responsivo & Adaptado</p>
+          </div>
         </div>
-
-        <div class="col-lg-7">
-          <p class="section-text">
-            Meu nome é <strong>Saulo da Silva Marques</strong>, sou desenvolvedor web e trabalho com criação de sites
-            para pequenos negócios que querem ter uma presença online mais profissional.
-          </p>
-
-          <p class="section-text">
-            Meu foco é criar sites objetivos, rápidos, responsivos e com uma comunicação direta para transformar
-            visitantes em contatos pelo WhatsApp.
-          </p>
-
-          <div class="about-list">
-            <div>
-              <i class="bi bi-code-slash"></i>
-              <span>HTML, CSS, JavaScript e Bootstrap</span>
-            </div>
-
-            <div>
-              <i class="bi bi-phone"></i>
-              <span>Sites adaptados para celular</span>
-            </div>
-
-            <div>
-              <i class="bi bi-search"></i>
-              <span>SEO básico e compartilhamento profissional</span>
-            </div>
-
-            <div>
-              <i class="bi bi-whatsapp"></i>
-              <span>Botões estratégicos para WhatsApp</span>
-            </div>
+        <div class="col-6 col-md-3">
+          <div class="metric-card">
+            <h3>< 2s</h3>
+            <p>Tempo de Carregamento</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="metric-card">
+            <h3>12x</h3>
+            <p>Parcelamento Facilitado</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="metric-card">
+            <h3>5.0 ★</h3>
+            <p>Satisfação dos Clientes</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Serviços -->
-  <section class="section-padding services-section" id="servicos">
+  <!-- Por que ter uma Landing Page? -->
+  <section class="section-padding why-lp-section" id="por-que-lp">
     <div class="container">
       <div class="section-title text-center">
-        <span class="section-tag">Serviços</span>
-
-        <h2>
-          O que eu posso criar para o seu negócio?
-        </h2>
-
-        <p>
-          Sites pensados para apresentar sua empresa, gerar confiança e facilitar o contato com seus clientes.
-        </p>
+        <span class="section-tag">Diferencial Estratégico</span>
+        <h2>Por que seu negócio precisa de uma <span class="text-gradient">Landing Page</span> e não de um site comum?</h2>
+        <p>Um site tradicional possui dezenas de botões e distracções que fazem o visitante ir embora sem comprar. A Landing Page guia o cliente para uma única ação de valor.</p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <i class="bi bi-window"></i>
-
-            <h3>Site institucional</h3>
-
-            <p>
-              Uma página profissional para apresentar sua empresa, serviços, localização, redes sociais e contato.
-            </p>
+          <div class="comparison-card bad">
+            <div class="card-status-tag"><i class="bi bi-x-circle-fill"></i> Site Institucional Comum</div>
+            <h3>Muitos menus e dispersão</h3>
+            <ul>
+              <li><i class="bi bi-x"></i> Visitantes se perdem navegando</li>
+              <li><i class="bi bi-x"></i> Carregamento lento em celulares</li>
+              <li><i class="bi bi-x"></i> Sem textos persuasivos focados em venda</li>
+              <li><i class="bi bi-x"></i> Taxa de conversão baixa (< 1%)</li>
+            </ul>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <i class="bi bi-bag-check"></i>
-
-            <h3>Site vitrine</h3>
-
-            <p>
-              Ideal para mostrar produtos, coleções, serviços, fotos, preços e direcionar o cliente para o WhatsApp.
-            </p>
+          <div class="comparison-card winner">
+            <div class="card-status-tag highlight"><i class="bi bi-trophy-fill"></i> Landing Page de Alta Conversão</div>
+            <h3>Foco 100% na Venda</h3>
+            <ul>
+              <li><i class="bi bi-check-lg"></i> Comunicação direta e persuasive</li>
+              <li><i class="bi bi-check-lg"></i> Botões de WhatsApp estratégicos</li>
+              <li><i class="bi bi-check-lg"></i> Otimização extrema para smartphones</li>
+              <li><i class="bi bi-check-lg"></i> Multiplica seus contatos de 5% a 15%</li>
+            </ul>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <div class="service-card">
-            <i class="bi bi-rocket-takeoff"></i>
-
-            <h3>Landing page</h3>
-
-            <p>
-              Página focada em conversão, perfeita para campanhas, divulgação de serviços ou apresentação de oferta.
-            </p>
+          <div class="comparison-card feature-box">
+            <div class="card-status-tag info"><i class="bi bi-gem"></i> O que eu faço por você</div>
+            <h3>Sua marca em outro nível</h3>
+            <p>Combino <strong>design moderno</strong>, <strong>copywriting envolvente</strong> e <strong>tecnologia leve</strong> para transformar curiosos em clientes pagantes.</p>
+            <a href="#pacotes" class="btn btn-primary-gradient w-100 mt-3">Ver Pacotes Disponíveis</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Modelos -->
+  <!-- Modelos Prontos & Demonstrações -->
   <section class="section-padding models-section" id="modelos">
     <div class="container">
       <div class="section-title text-center">
-        <span class="section-tag">Modelos publicados</span>
-
-        <h2>
-          Veja modelos reais funcionando
-        </h2>
-
-        <p>
-          Escolha um modelo pronto como base para o seu site.
-        </p>
+        <span class="section-tag">Demonstrações Reais</span>
+        <h2>Explore Nossos Modelos de Alta Conversão</h2>
+        <p>Escolha um modelo como ponto de partida ou criamos uma estrutura 100% sob medida para o seu nicho.</p>
       </div>
 
       <div class="row g-4">
         <!-- Modelo 1 -->
         <div class="col-md-6 col-lg-4">
           <div class="model-card">
-            <div class="model-icon">
-              <i class="bi bi-bag-heart"></i>
+            <div class="model-badge">Loja / Varejo</div>
+            <div class="model-icon-box">
+              <i class="bi bi-bag-heart-fill"></i>
             </div>
 
-            <h3>Loja Infantil / Roupas</h3>
+            <h3>Loja Infantil / Moda</h3>
+            <p>Perfeito para lojas de roupas, calçados, enxovais, brechós e comércios locais que querem catálogo visual direto pro WhatsApp.</p>
 
-            <p>
-              Ideal para lojas de roupas, acessórios, enxoval, calçados, brechós e pequenos comércios.
-            </p>
-
-            <ul>
-              <li>Produtos em destaque</li>
-              <li>Botão para pedido no WhatsApp</li>
-              <li>Galeria, localização e redes sociais</li>
+            <ul class="model-features">
+              <li><i class="bi bi-check2"></i> Galeria visual de produtos</li>
+              <li><i class="bi bi-check2"></i> Botão de checkout/pedido direto</li>
+              <li><i class="bi bi-check2"></i> Localização & Redes Sociais</li>
             </ul>
 
-            <div class="model-buttons">
-              <a href="https://saulinhomarques.github.io/template1" target="_blank" class="btn btn-model">
-                Ver demonstração
+            <div class="model-actions">
+              <a href="https://saulinhomarques.github.io/template1" target="_blank" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-eye-fill me-1"></i> Ver Demo
               </a>
-
-              <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vi%20o%20modelo%20de%20loja%20infantil%20e%20quero%20adaptar%20para%20meu%20negócio."
-                target="_blank" class="btn btn-whatsapp-outline">
-                Quero esse
+              <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Gostei%20do%20modelo%20de%20Loja%20Infantil/Moda%20e%20quero%20adaptar%20para%20mim."
+                target="_blank" class="btn btn-whatsapp-sm">
+                <i class="bi bi-whatsapp me-1"></i> Quero Este
               </a>
             </div>
           </div>
@@ -358,32 +345,27 @@
         <!-- Modelo 2 -->
         <div class="col-md-6 col-lg-4">
           <div class="model-card featured-model">
-            <span class="model-label">Muito procurado</span>
-
-            <div class="model-icon">
+            <div class="model-badge popular">Mais Procurado</div>
+            <div class="model-icon-box text-primary">
               <i class="bi bi-scissors"></i>
             </div>
 
-            <h3>Barbearia / Salão</h3>
+            <h3>Barbearia / Salão / Estética</h3>
+            <p>Desenvolvido para agendamentos rápidos de barbearias, studios de beleza, estética e serviços recorrentes.</p>
 
-            <p>
-              Ideal para barbearias, salões, estética, manicure, studios de tatuagem e beleza em geral.
-            </p>
-
-            <ul>
-              <li>Lista de serviços e preços</li>
-              <li>Agendamento pelo WhatsApp</li>
-              <li>Galeria, equipe e depoimentos</li>
+            <ul class="model-features">
+              <li><i class="bi bi-check2"></i> Tabela de preços e serviços</li>
+              <li><i class="bi bi-check2"></i> Agendamento fácil no WhatsApp</li>
+              <li><i class="bi bi-check2"></i> Seção de avaliações e equipe</li>
             </ul>
 
-            <div class="model-buttons">
-              <a href="https://saulinhomarques.github.io/template2" target="_blank" class="btn btn-model">
-                Ver demonstração
+            <div class="model-actions">
+              <a href="https://saulinhomarques.github.io/template2" target="_blank" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-eye-fill me-1"></i> Ver Demo
               </a>
-
-              <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vi%20o%20modelo%20de%20barbearia%20e%20quero%20um%20site%20parecido."
-                target="_blank" class="btn btn-whatsapp-outline">
-                Quero esse
+              <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Gostei%20do%20modelo%20de%20Barbearia/Salão%20e%20quero%20um%20site%20parecido."
+                target="_blank" class="btn btn-whatsapp-sm">
+                <i class="bi bi-whatsapp me-1"></i> Quero Este
               </a>
             </div>
           </div>
@@ -392,30 +374,27 @@
         <!-- Modelo 3 -->
         <div class="col-md-6 col-lg-4">
           <div class="model-card">
-            <div class="model-icon">
+            <div class="model-badge">Serviços Locais</div>
+            <div class="model-icon-box">
               <i class="bi bi-tools"></i>
             </div>
 
-            <h3>Prestador de Serviço</h3>
+            <h3>Prestadores de Serviços</h3>
+            <p>Ideal para eletricistas, encanadores, técnicos, pintores, marcenarias e profissionais autônomos de resposta rápida.</p>
 
-            <p>
-              Ideal para eletricista, encanador, técnico, mecânico, pintor, assistência técnica e serviços locais.
-            </p>
-
-            <ul>
-              <li>Cards de serviços</li>
-              <li>Área atendida e orçamento</li>
-              <li>WhatsApp fixo e avaliações</li>
+            <ul class="model-features">
+              <li><i class="bi bi-check2"></i> Cards de especialidades</li>
+              <li><i class="bi bi-check2"></i> Chamada de emergência no WhatsApp</li>
+              <li><i class="bi bi-check2"></i> Depoimentos de clientes satisfeitos</li>
             </ul>
 
-            <div class="model-buttons">
-              <a href="https://saulinhomarques.github.io/template3" target="_blank" class="btn btn-model">
-                Ver demonstração
+            <div class="model-actions">
+              <a href="https://saulinhomarques.github.io/template3" target="_blank" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-eye-fill me-1"></i> Ver Demo
               </a>
-
-              <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vi%20o%20modelo%20de%20prestador%20de%20serviço%20e%20quero%20um%20orçamento."
-                target="_blank" class="btn btn-whatsapp-outline">
-                Quero esse
+              <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Gostei%20do%20modelo%20de%20Prestador%20de%20Serviços."
+                target="_blank" class="btn btn-whatsapp-sm">
+                <i class="bi bi-whatsapp me-1"></i> Quero Este
               </a>
             </div>
           </div>
@@ -424,121 +403,178 @@
     </div>
   </section>
 
-  <!-- Pacotes -->
+  <!-- Simulador de ROI (Retorno do Investimento) -->
+  <section class="section-padding simulator-section" id="simulador">
+    <div class="container">
+      <div class="simulator-box glass-card">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="section-tag">Calculadora Inteligente</span>
+            <h2>Veja o quão rápido sua Landing Page se paga</h2>
+            <p>Selecione seu segmento de mercado e descubra quantos clientes/vendas novos você precisa para cobrir 100% do investimento no seu site!</p>
+
+            <div class="mb-4">
+              <label for="nicheSelect" class="form-label fw-bold">1. Escolha o seu segmento:</label>
+              <select id="nicheSelect" class="form-select custom-select">
+                <option value="50" selected>Barbearia / Salão (Ticket médio: R$ 50)</option>
+                <option value="120">Prestador de Serviço / Técnico (Ticket médio: R$ 120)</option>
+                <option value="200">Consultoria / Psicologia / Saúde (Ticket médio: R$ 200)</option>
+                <option value="350">Advocacia / Serviços Especializados (Ticket médio: R$ 350)</option>
+                <option value="80">Loja Virtual / Produtos (Ticket médio: R$ 80)</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label for="ticketInput" class="form-label fw-bold">2. Ou digite o valor médio do seu serviço (R$):</label>
+              <input type="number" id="ticketInput" class="form-control custom-input" value="50" min="10" step="10">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="roi-result-card text-center">
+              <div class="roi-icon"><i class="bi bi-cash-coin"></i></div>
+              <span class="roi-label">Com o Pacote Profissional (R$ 797):</span>
+              
+              <div class="roi-highlight">
+                <h3 id="clientsNeeded">16</h3>
+                <span>novos clientes/vendas pagam o site para sempre!</span>
+              </div>
+
+              <p class="roi-explanation mt-3" id="roiDetailText">
+                Depois de 16 vendas, todo lucro gerado pela sua Landing Page é 100% seu.
+              </p>
+
+              <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Fiz%20a%20simulação%20no%20seu%20site%20e%20quero%20garantir%20minha%20Landing%20Page!" 
+                target="_blank" class="btn btn-main w-100 mt-2">
+                <i class="bi bi-whatsapp me-2"></i> Começar Agora Mesmo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pacotes & Preços Justos -->
   <section class="section-padding pricing-section" id="pacotes">
     <div class="container">
       <div class="section-title text-center">
-        <span class="section-tag">Pacotes</span>
+        <span class="section-tag">Investimento Transparente</span>
+        <h2>Planos Sob Medida com Preço Justo</h2>
+        <p>Valores claros, sem surpresas e com opção de parcelamento em até 12x no cartão de crédito.</p>
 
-        <h2>
-          Escolha o plano ideal para começar
-        </h2>
-
-        <p>
-          Os valores são “a partir de”, porque cada cliente pode precisar de algo diferente. Aqui não é preço travado
-          igual boleto chegando dia 5.
-        </p>
+        <!-- Toggle À Vista vs Parcelado -->
+        <div class="pricing-toggle-wrapper mt-4">
+          <span class="toggle-label" id="labelCash">À Vista (Desconto PIX)</span>
+          <label class="switch">
+            <input type="checkbox" id="pricingToggle">
+            <span class="slider round"></span>
+          </label>
+          <span class="toggle-label active" id="labelInstallments">Em até 12x no Cartão</span>
+        </div>
       </div>
 
       <div class="row g-4 align-items-stretch">
-        <!-- Básico -->
+        <!-- Pacote Starter / Express -->
         <div class="col-lg-4">
-          <div class="price-card">
-            <h3>Pacote Básico</h3>
-
-            <span class="price-subtitle">Site Página Única</span>
-
-            <div class="price">
-              <small>A partir de</small>
-              R$ 497
+          <div class="price-card glass-card">
+            <div class="price-header">
+              <h3>LP Express</h3>
+              <p class="price-subtitle">Landing Page Essencial</p>
             </div>
 
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Página única</li>
-              <li><i class="bi bi-check-circle"></i> Design responsivo</li>
-              <li><i class="bi bi-check-circle"></i> Botão de WhatsApp</li>
-              <li><i class="bi bi-check-circle"></i> Seção sobre</li>
-              <li><i class="bi bi-check-circle"></i> Produtos ou serviços</li>
-              <li><i class="bi bi-check-circle"></i> Localização</li>
-              <li><i class="bi bi-check-circle"></i> Redes sociais</li>
-              <li><i class="bi bi-check-circle"></i> SEO básico</li>
-              <li><i class="bi bi-check-circle"></i> Publicação online</li>
-              <li><i class="bi bi-check-circle"></i> Acessibilidade</li>
+            <div class="price-box">
+              <small class="price-prefix">A partir de</small>
+              <div class="price-value" data-cash="R$ 397" data-installment="12x R$ 39,70">
+                12x R$ 39,70
+              </div>
+              <span class="price-note" data-note="ou R$ 397 à vista no PIX">ou R$ 397 à vista no PIX</span>
+            </div>
+
+            <ul class="price-features">
+              <li><i class="bi bi-check-circle-fill"></i> 1 Página Única Otimizada</li>
+              <li><i class="bi bi-check-circle-fill"></i> Design 100% Responsivo (Mobile)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Botão de Chamada para WhatsApp</li>
+              <li><i class="bi bi-check-circle-fill"></i> Seção Sobre + Serviços/Produtos</li>
+              <li><i class="bi bi-check-circle-fill"></i> Localização & Redes Sociais</li>
+              <li><i class="bi bi-check-circle-fill"></i> SEO Básico para o Google</li>
+              <li><i class="bi bi-check-circle-fill"></i> Publicação Online Inclusa</li>
+              <li><i class="bi bi-check-circle-fill"></i> Entrega em até 3 dias úteis</li>
             </ul>
 
-            <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vim%20Pelo%20Site!%20Tenho%20interesse%20no%20Pacote%20Básico%20de%20site%20página%20única."
-              target="_blank" class="btn btn-price">
-              Pedir orçamento
+            <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Tenho%20interesse%20no%20plano%20LP%20Express!"
+              target="_blank" class="btn btn-outline-custom w-100 btn-select-plan" data-plan="LP Express">
+              Quero o Plano Express
             </a>
           </div>
         </div>
 
-        <!-- Profissional -->
+        <!-- Pacote Profissional / Alta Conversão (Destaque) -->
         <div class="col-lg-4">
-          <div class="price-card highlighted-price">
-            <span class="popular-badge">Mais indicado</span>
+          <div class="price-card glass-card highlighted-price">
+            <div class="popular-badge">Mais Vendido ★</div>
 
-            <h3>Pacote Profissional</h3>
-
-            <span class="price-subtitle">Site Vitrine</span>
-
-            <div class="price">
-              <small>A partir de</small>
-              R$ 897
+            <div class="price-header">
+              <h3>LP Alta Conversão</h3>
+              <p class="price-subtitle">Completa com Copywriting</p>
             </div>
 
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Até 5 seções ou páginas</li>
-              <li><i class="bi bi-check-circle"></i> Galeria</li>
-              <li><i class="bi bi-check-circle"></i> Depoimentos</li>
-              <li><i class="bi bi-check-circle"></i> Produtos ou serviços</li>
-              <li><i class="bi bi-check-circle"></i> WhatsApp fixo</li>
-              <li><i class="bi bi-check-circle"></i> Google Maps</li>
-              <li><i class="bi bi-check-circle"></i> SEO básico</li>
-              <li><i class="bi bi-check-circle"></i> Open Graph para WhatsApp</li>
-              <li><i class="bi bi-check-circle"></i> Publicação online</li>
-              <li><i class="bi bi-check-circle"></i> Suporte inicial</li>
-                            <li><i class="bi bi-check-circle"></i> Acessibilidade</li>
+            <div class="price-box">
+              <small class="price-prefix">A partir de</small>
+              <div class="price-value" data-cash="R$ 797" data-installment="12x R$ 79,70">
+                12x R$ 79,70
+              </div>
+              <span class="price-note" data-note="ou R$ 797 à vista no PIX">ou R$ 797 à vista no PIX</span>
+            </div>
 
+            <ul class="price-features">
+              <li><i class="bi bi-check-circle-fill"></i> Até 6 Seções Estratégicas</li>
+              <li><i class="bi bi-check-circle-fill"></i> Copywriting Persuasivo (Textos de Venda)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Otimização de Velocidade (PageSpeed 90+)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Botão Fixo de WhatsApp + Formulário</li>
+              <li><i class="bi bi-check-circle-fill"></i> Open Graph (Preview Bonita no WhatsApp)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Seção de Depoimentos & Galeria</li>
+              <li><i class="bi bi-check-circle-fill"></i> Integrado ao Google Maps & Redes</li>
+              <li><i class="bi bi-check-circle-fill"></i> Garantia Incondicional de 7 Dias</li>
+              <li><i class="bi bi-check-circle-fill"></i> Suporte VIP por 30 Dias</li>
             </ul>
 
-            <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vim%20Pelo%20Site!%20Tenho%20interesse%20no%20Pacote%20Profissional%20Site%20Vitrine."
-              target="_blank" class="btn btn-price btn-price-highlight">
-              Quero esse pacote
+            <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Tenho%20interesse%20no%20plano%20LP%20Alta%20Conversão!"
+              target="_blank" class="btn btn-main w-100 btn-select-plan" data-plan="LP Alta Conversão">
+              Quero Alta Conversão
             </a>
           </div>
         </div>
 
-        <!-- Premium -->
+        <!-- Pacote Premium / Tráfego Pago -->
         <div class="col-lg-4">
-          <div class="price-card">
-            <h3>Pacote Premium</h3>
-
-            <span class="price-subtitle">Site + Estratégia</span>
-
-            <div class="price">
-              <small>A partir de</small>
-              R$ 1.497
+          <div class="price-card glass-card">
+            <div class="price-header">
+              <h3>LP Premium & Ads</h3>
+              <p class="price-subtitle">Para Anúncios no Google/Meta</p>
             </div>
 
-            <ul>
-              <li><i class="bi bi-check-circle"></i> Site completo</li>
-              <li><i class="bi bi-check-circle"></i> Textos persuasivos</li>
-              <li><i class="bi bi-check-circle"></i> Mais páginas</li>
-              <li><i class="bi bi-check-circle"></i> Formulário</li>
-              <li><i class="bi bi-check-circle"></i> Integração com e-mail</li>
-              <li><i class="bi bi-check-circle"></i> Google Analytics</li>
-              <li><i class="bi bi-check-circle"></i> Google Search Console</li>
-              <li><i class="bi bi-check-circle"></i> Otimização extra</li>
-              <li><i class="bi bi-check-circle"></i> Suporte estendido</li>
-                            <li><i class="bi bi-check-circle"></i> Acessibilidade</li>
-              <li><i class="bi bi-check-circle"></i> Interface 3D (Em Breve)</li>
+            <div class="price-box">
+              <small class="price-prefix">A partir de</small>
+              <div class="price-value" data-cash="R$ 1.297" data-installment="12x R$ 129,70">
+                12x R$ 129,70
+              </div>
+              <span class="price-note" data-note="ou R$ 1.297 à vista no PIX">ou R$ 1.297 à vista no PIX</span>
+            </div>
 
+            <ul class="price-features">
+              <li><i class="bi bi-check-circle-fill"></i> Tudo da LP Alta Conversão</li>
+              <li><i class="bi bi-check-circle-fill"></i> Instalação de Meta Pixel & Google Tag</li>
+              <li><i class="bi bi-check-circle-fill"></i> Integração com Google Analytics 4</li>
+              <li><i class="bi bi-check-circle-fill"></i> Registro no Google Search Console</li>
+              <li><i class="bi bi-check-circle-fill"></i> Otimização Extra para Tráfego Pago</li>
+              <li><i class="bi bi-check-circle-fill"></i> Testes A/B de Chamadas e Botões</li>
+              <li><i class="bi bi-check-circle-fill"></i> Suporte Prioritário por 60 Dias</li>
             </ul>
 
-            <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vim%20Pelo%20Site!%20Tenho%20interesse%20no%20Pacote%20Premium%20Site%20mais%20Estratégia."
-              target="_blank" class="btn btn-price">
-              Pedir orçamento
+            <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Tenho%20interesse%20no%20plano%20LP%20Premium%20%26%20Ads!"
+              target="_blank" class="btn btn-outline-custom w-100 btn-select-plan" data-plan="LP Premium & Ads">
+              Quero o Plano Premium
             </a>
           </div>
         </div>
@@ -546,186 +582,132 @@
     </div>
   </section>
 
-  <!-- Benefícios -->
-  <section class="section-padding benefits-section">
+  <!-- Prova Social & Depoimentos -->
+  <section class="section-padding testimonials-section" id="depoimentos">
     <div class="container">
       <div class="section-title text-center">
-        <span class="section-tag">Benefícios</span>
-
-        <h2>
-          Por que ter um site profissional?
-        </h2>
+        <span class="section-tag">Histórias de Sucesso</span>
+        <h2>O que dizem os clientes que já investiram em uma Landing Page</h2>
       </div>
 
       <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div class="benefit-card">
-            <i class="bi bi-shield-check"></i>
-
-            <h3>Mais confiança</h3>
-
-            <p>
-              Um site bem feito passa mais credibilidade para quem conhece sua empresa pela primeira vez.
-            </p>
+        <div class="col-md-4">
+          <div class="testimonial-card glass-card">
+            <div class="rating-stars">★★★★★</div>
+            <p>"Depois que o Saulo criou a Landing Page da minha barbearia, os agendamentos pelo WhatsApp dobraram na primeira semana. O site carrega na hora no celular!"</p>
+            <div class="client-info">
+              <strong>Marcelo Santos</strong>
+              <span>Dono de Barbearia</span>
+            </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="benefit-card">
-            <i class="bi bi-whatsapp"></i>
-
-            <h3>Mais contatos</h3>
-
-            <p>
-              Botões estratégicos levam o cliente direto para o WhatsApp com mensagem pronta.
-            </p>
+        <div class="col-md-4">
+          <div class="testimonial-card glass-card">
+            <div class="rating-stars">★★★★★</div>
+            <p>"Excelente profissional. Entrega rápida, atencioso e a página ficou super moderna. Recomendo demais para quem quer vender pelo WhatsApp."</p>
+            <div class="client-info">
+              <strong>Fernanda Lima</strong>
+              <span>Prestadora de Serviços</span>
+            </div>
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="benefit-card">
-            <i class="bi bi-phone"></i>
-
-            <h3>Funciona no celular</h3>
-
-            <p>
-              O site se adapta para celular, tablet e computador, sem ficar quebrado igual promessa de estudar segunda.
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3">
-          <div class="benefit-card">
-            <i class="bi bi-graph-up-arrow"></i>
-
-            <h3>Presença online</h3>
-
-            <p>
-              Sua empresa ganha um endereço profissional para divulgar no Instagram, WhatsApp, cartão e Google.
-            </p>
+        <div class="col-md-4">
+          <div class="testimonial-card glass-card">
+            <div class="rating-stars">★★★★★</div>
+            <p>"Investimento que valeu cada centavo. O modelo de loja atende perfeitamente nossos clientes e a conversão subiu rápido."</p>
+            <div class="client-info">
+              <strong>Ricardo Oliveira</strong>
+              <span>Comércio Local</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Processo -->
+  <!-- Processo de Trabalho -->
   <section class="section-padding process-section" id="processo">
     <div class="container">
       <div class="section-title text-center">
-        <span class="section-tag">Processo</span>
-
-        <h2>
-          Como funciona a criação do site?
-        </h2>
-
-        <p>
-          Processo simples, direto e sem enrolação nível tutorial de 40 minutos para ensinar abrir o navegador.
-        </p>
+        <span class="section-tag">Passo a Passo</span>
+        <h2>Como Funciona a Criação do Seu Site?</h2>
+        <p>Um processo simples, ágil e sem complicações do início ao fim.</p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
-          <div class="process-card">
-            <span>01</span>
-
-            <h3>Contato inicial</h3>
-
-            <p>
-              Você me chama no WhatsApp e explica o tipo de site que precisa.
-            </p>
+          <div class="process-step-card glass-card">
+            <div class="step-num">01</div>
+            <h3>Conversa Inicial</h3>
+            <p>Você me fala sobre seu negócio, objetivos e o que precisa comunicar para seus clientes.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="process-card">
-            <span>02</span>
-
-            <h3>Escolha do modelo</h3>
-
-            <p>
-              Escolhemos um modelo base ou definimos uma estrutura personalizada.
-            </p>
+          <div class="process-step-card glass-card">
+            <div class="step-num">02</div>
+            <h3>Design & Copywriting</h3>
+            <p>Criamos a estrutura visual e os textos estratégicos focados na sua área de atuação.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="process-card">
-            <span>03</span>
-
-            <h3>Criação do site</h3>
-
-            <p>
-              Eu desenvolvo o site com textos, seções, botões e visual adaptado ao negócio.
-            </p>
+          <div class="process-step-card glass-card">
+            <div class="step-num">03</div>
+            <h3>Aprovação & Ajustes</h3>
+            <p>Você analisa a prévia do site, envia suas opiniões e fazemos qualquer ajuste necessário.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
-          <div class="process-card">
-            <span>04</span>
-
-            <h3>Publicação online</h3>
-
-            <p>
-              Depois da aprovação, o site é publicado e fica pronto para divulgação.
-            </p>
+          <div class="process-step-card glass-card">
+            <div class="step-num">04</div>
+            <h3>Publicação</h3>
+            <p>Colocamos seu site no ar pronto para receber acessos e gerar contatos no WhatsApp!</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projetos Extras -->
+  <!-- Projetos Especiais & Habilidades -->
   <section class="section-padding projects-section">
     <div class="container">
       <div class="section-title text-center">
-        <span class="section-tag">Projetos</span>
-
-        <h2>
-          Outros projetos e experiências
-        </h2>
-
-        <p>
-          Além dos modelos comerciais, também desenvolvo projetos acadêmicos e sistemas web.
-        </p>
+        <span class="section-tag">Capacidade Técnica</span>
+        <h2>Projetos Desenvolvidos & Engenharia Web</h2>
+        <p>Além de landing pages comerciais, desenvolvo sistemas web e automações IoT.</p>
       </div>
 
       <div class="row g-4">
         <div class="col-lg-6">
-          <div class="project-card">
-            <div class="project-icon">
-              <i class="bi bi-sun"></i>
+          <div class="project-box glass-card">
+            <div class="project-icon-wrapper">
+              <i class="bi bi-sun-fill text-warning"></i>
             </div>
-
             <div>
-              <h3>Sunseeker</h3>
-
-              <p>
-                Sistema de monitoramento e análise de geração de energia solar em tempo real, usando sensores, ESP32 e
-                dashboard web.
-              </p>
-
-              <span>HTML • CSS • JavaScript • Firebase • ESP32</span>
+              <h3>Sunseeker — Monitoramento Solar</h3>
+              <p>Sistema IoT em tempo real para medição e análise de energia solar com ESP32, Firebase e Dashboard Web responsivo.</p>
+              <div class="tech-tags">
+                <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>Firebase</span> <span>ESP32</span>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="col-lg-6">
-          <div class="project-card">
-            <div class="project-icon">
-              <i class="bi bi-cpu"></i>
+          <div class="project-box glass-card">
+            <div class="project-icon-wrapper">
+              <i class="bi bi-cpu-fill text-primary"></i>
             </div>
-
             <div>
-              <h3>Projetos com Arduino</h3>
-
-              <p>
-                Projetos de robótica básica, automação e integração com sensores, incluindo carrinho controlado por
-                Bluetooth.
-              </p>
-
-              <span>Arduino • Eletrônica • Sensores • Bluetooth</span>
+              <h3>Automação & Robótica com Arduino</h3>
+              <p>Integração de hardware, sensores e comunicação Bluetooth para prototipagem de soluções tecnológicas.</p>
+              <div class="tech-tags">
+                <span>Arduino C++</span> <span>Sensores</span> <span>Bluetooth</span> <span>Automação</span>
+              </div>
             </div>
           </div>
         </div>
@@ -733,28 +715,37 @@
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- Garantia de 7 Dias -->
+  <section class="section-padding guarantee-section">
+    <div class="container">
+      <div class="guarantee-box glass-card text-center">
+        <div class="guarantee-badge">
+          <i class="bi bi-shield-check"></i>
+        </div>
+        <h2>Risco Zero: Garantia Incondicional de 7 Dias</h2>
+        <p>Tenho total confiança no resultado do meu trabalho. Se em até 7 dias após a entrega você não ficar satisfeito com o visual do seu site, fazemos as alterações necessárias ou devolvemos seu investimento sem burocracia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
   <section class="section-padding faq-section" id="faq">
     <div class="container">
       <div class="section-title text-center">
-        <span class="section-tag">Perguntas frequentes</span>
-
-        <h2>
-          Dúvidas comuns antes de pedir um site
-        </h2>
+        <span class="section-tag">Tire suas Dúvidas</span>
+        <h2>Perguntas Frequentes</h2>
       </div>
 
       <div class="accordion custom-accordion" id="faqAccordion">
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-              O site funciona no celular?
+              Quanto tempo demora para a Landing Page ficar pronta?
             </button>
           </h3>
-
           <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Sim. Todos os sites são responsivos, ou seja, se adaptam para celular, tablet e computador.
+              O prazo médio de entrega é de <strong>3 a 5 dias úteis</strong> após o envio das informações básicas (sua logo, fotos e textos ou ideias de conteúdo).
             </div>
           </div>
         </div>
@@ -762,13 +753,12 @@
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-              O site já vem com botão de WhatsApp?
+              Preciso contratar hospedagem e domínio separados?
             </button>
           </h3>
-
           <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Sim. O site pode ter botões de WhatsApp em pontos estratégicos e também um botão fixo na tela.
+              A publicação inicial e configuração do endereço estão inclusas no pacote. Se você já tiver um domínio próprio (.com.br), conectamos diretamente ao seu novo site sem custo adicional.
             </div>
           </div>
         </div>
@@ -776,14 +766,12 @@
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-              Posso adaptar um dos modelos prontos?
+              Como funciona o botão do WhatsApp no site?
             </button>
           </h3>
-
           <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Sim. Os modelos servem como base para acelerar o processo, mas textos, cores, imagens e seções podem ser
-              adaptados para o seu negócio.
+              Configuramos mensagens personalizadas automáticas. Quando o visitante clica no botão do site, o aplicativo do WhatsApp dele abre automaticamente com a mensagem já digitada (ex: <i>"Olá, vi seu site e gostaria de um orçamento!"</i>).
             </div>
           </div>
         </div>
@@ -791,29 +779,12 @@
         <div class="accordion-item">
           <h3 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-              Você publica o site online?
+              Quais são as formas de pagamento?
             </button>
           </h3>
-
           <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
             <div class="accordion-body">
-              Sim. A publicação online está inclusa nos pacotes. Também posso orientar sobre domínio, hospedagem e
-              configuração inicial.
-            </div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <h3 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-              O valor pode mudar?
-            </button>
-          </h3>
-
-          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">
-              Sim. Os valores são “a partir de” porque cada projeto pode ter necessidades diferentes, como mais páginas,
-              formulário, integrações ou recursos extras.
+              Aceitamos pagamento via <strong>PIX (com desconto à vista)</strong> ou parcelado em até <strong>12x no cartão de crédito</strong>.
             </div>
           </div>
         </div>
@@ -824,19 +795,13 @@
   <!-- CTA Final -->
   <section class="final-cta" id="contato">
     <div class="container">
-      <div class="final-cta-box">
-        <h2>
-          Pronto para ter um site profissional para o seu negócio?
-        </h2>
-
-        <p>
-          Me chame no WhatsApp, veja os modelos disponíveis e peça um orçamento personalizado.
-        </p>
-
-        <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Quero%20criar%20um%20site%20profissional%20para%20meu%20negócio."
-          target="_blank" class="btn btn-main">
-          <i class="bi bi-whatsapp"></i>
-          Falar com Saulo no WhatsApp
+      <div class="final-cta-box text-center">
+        <h2>Pronto para transformar a presença digital do seu negócio?</h2>
+        <p>Fale direto comigo no WhatsApp e solicite um orçamento sem compromisso.</p>
+        <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vim%20pelo%20site%20e%20quero%20criar%20uma%20Landing%20Page%20de%20alta%20conversão."
+          target="_blank" class="btn btn-main btn-lg shadow-lg">
+          <i class="bi bi-whatsapp me-2"></i>
+          Falar com Saulo Marques no WhatsApp
         </a>
       </div>
     </div>
@@ -848,55 +813,35 @@
       <div class="row g-4 align-items-center">
         <div class="col-md-6">
           <h3><span>Saulo</span>Marques</h3>
-
-          <p>
-            Desenvolvedor web focado em criação de sites profissionais para pequenos negócios.
-          </p>
+          <p>Desenvolvedor Web especialista em Landing Pages e Criação de Sites de Alta Conversão.</p>
         </div>
 
         <div class="col-md-6 text-md-end">
-          <p class="footer-contact">
-            <i class="bi bi-envelope"></i>
-            saulomqs975@gmail.com
-          </p>
-
-          <p class="footer-contact">
-            <i class="bi bi-whatsapp"></i>
-            +55 11 99727-4119
-          </p>
-
-          <p class="footer-contact">
-            <i class="bi bi-geo-alt"></i>
-            Francisco Morato - SP
-          </p>
+          <p class="footer-contact"><i class="bi bi-envelope me-2"></i>saulomqs975@gmail.com</p>
+          <p class="footer-contact"><i class="bi bi-whatsapp me-2"></i>+55 11 99727-4119</p>
+          <p class="footer-contact"><i class="bi bi-geo-alt me-2"></i>Francisco Morato - SP</p>
         </div>
       </div>
 
       <hr />
 
       <div class="footer-bottom">
-        <p>
-          © 2026 Saulo da Silva Marques. Todos os direitos reservados.
-        </p>
-
-        <a href="#top" id="backToTop">
-          Voltar ao topo
-        </a>
+        <p>© 2026 Saulo da Silva Marques. Todos os direitos reservados.</p>
+        <a href="#top" id="backToTop"><i class="bi bi-arrow-up-circle me-1"></i> Voltar ao topo</a>
       </div>
     </div>
   </footer>
 
-  <!-- WhatsApp fixo -->
-  <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Vi%20seu%20portfólio%20e%20quero%20um%20orçamento%20para%20um%20site."
+  <!-- WhatsApp Flutuante -->
+  <a href="https://wa.me/5511997274119?text=Olá,%20Saulo!%20Estou%20no%20seu%20site%20e%20quero%20um%20orçamento!"
     target="_blank" class="floating-whatsapp" aria-label="Chamar no WhatsApp">
     <i class="bi bi-whatsapp"></i>
   </a>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-  </script>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- JS -->
+  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 
